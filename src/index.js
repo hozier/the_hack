@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import App from './App'; // Our custom react component
+import App from './components/app'; // Our custom react component
 import './index.css';
 
 // Needed for onTouchTap

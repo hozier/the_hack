@@ -13,9 +13,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Avatar from 'material-ui/Avatar';
 import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
-import Hozier from "./components/img/csseuxui-128.jpg"
-import AppBarIcon from "./components/appbaricon"
-import {getStyles} from "./components/styles"
+import Hozier from "./img/csseuxui-128.jpg"
+import AppBarIcon from "./appbaricon"
+import {getStyles} from "./styles"
 
 const styles = getStyles()
 const muiTheme = getMuiTheme({
