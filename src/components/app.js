@@ -4,7 +4,7 @@
 */
 import React, {Component} from 'react';
 import {Homepage, getStyles, Dialog, FlatButton, RaisedButton,
-   getMuiTheme, MuiThemeProvider, Fingerprint}
+   getMuiTheme, MuiThemeProvider}
    from "./lockerbox"
 
 const styles = getStyles()
