@@ -4,10 +4,8 @@
 ###### (a) In Development
 Implementation of an SPA (single-page application) engineering blog built with ReactJS, NodeJS and the principles of Material Design.
 
-###### (b) Open-source dependencies
-      < > with ♥ using NodeJS, ReactJS and Material-UI
 
-###### (c) API
+###### (b) API
 component | type | description
 --- | --- | ---
 < Hozier > | img | renders author's image as subclassed Avatar
@@ -19,14 +17,15 @@ component | type | description
 getStyles ( ) | function | returns an object which defines the main css rules
 
 
-
-
-###### (d) Run
+###### (c) Run
 From the root directory, do:
 
 `npm install`
 
 `npm start`
+
+###### (d) Open-source dependencies
+###### < > with ♥ using NodeJS, ReactJS and Material-UI
 
 
 ###### Author: Philron Hozier
