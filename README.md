@@ -7,6 +7,12 @@ Implementation of an SPA (single-page application) engineering blog built with R
 ###### (b) Open-source dependencies
       < > with ♥ using NodeJS, ReactJS and Material-UI
 
+###### (c) Run
+From the root directory, do:
+
+`npm install`
+
+`npm start`
 
 
 ###### Author: Philron Hozier
