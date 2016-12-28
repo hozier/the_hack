@@ -12,8 +12,9 @@ component | type | description
 < AppBarIcon >  | navigation | renders app bar and application navigation
 < Fingerprint > | svg | renders a fingerprint to view
 < OctoCat > | svg | renders GitHub's OctoCat to view
-< App > | spa core | defines the core functionality of the single-page application
-< lockerbox > | interface | defines an interface through which all imports can be made  
+< App > | spa core | brings together the core rendering logic of the single-page app
+< Homepage > | spa core | implements the underlying media content for the homepage
+< lockerbox > | interface | defines an interface through which bulk imports can be made  
 getStyles ( ) | function | returns an object which defines the main css rules
 
 

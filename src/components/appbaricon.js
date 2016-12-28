@@ -5,6 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
 import {getStyles} from "./styles"
+import {lightGreen400} from 'material-ui/styles/colors';
 
 const styles = getStyles()
 
@@ -29,7 +30,11 @@ class AppBarIcon extends React.Component{
 
 
          <Drawer open={this.state.open}>
-         <Subheader style={{cursor: 'pointer'}} onTouchTap={this.handleToggle} >/ the_hack ></Subheader>
+         <Subheader style={
+            {cursor: 'pointer', paddingTop: 16, color:'#ffffff',
+            background:lightGreen400, fontWeight: '100'}}
+            onTouchTap={this.handleToggle} >/ the_hack >
+         </Subheader>
          <MenuItem>Monologues of An Engineer</MenuItem>
          <MenuItem>Projects</MenuItem>
          <MenuItem>About</MenuItem>

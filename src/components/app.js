@@ -3,6 +3,7 @@
 * which incorporates components provided by Material-UI.
 */
 import React, {Component} from 'react';
+import AppBarIcon from "./appbaricon"
 import {Homepage, getStyles, Dialog, FlatButton, RaisedButton,
    getMuiTheme, MuiThemeProvider}
    from "./lockerbox"
@@ -48,7 +49,7 @@ class App extends Component {
       return (
          <MuiThemeProvider muiTheme={muiTheme}>
          <div style={{fontWeight: '100'}}>
-
+            <AppBarIcon/>
             <Homepage/>
 
             <div style={styles.container}>

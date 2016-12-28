@@ -1,7 +1,6 @@
 import React from 'react'
 import Avatar from 'material-ui/Avatar';
 import {lightGreen400, pink300} from 'material-ui/styles/colors';
-import AppBarIcon from "./appbaricon"
 import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
 import {getStyles} from "./styles"
 import RaisedButton from 'material-ui/RaisedButton';
@@ -13,8 +12,6 @@ class Homepage extends React.Component {
    render(){
       return(
          <div>
-            <AppBarIcon></AppBarIcon>
-
             <div style={styles.box}>
                <Avatar
                   icon={<Fingerprint />}
