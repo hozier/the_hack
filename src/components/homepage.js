@@ -50,7 +50,7 @@ class Homepage extends React.Component {
 }
 
 // overview: defines styles used locally only for this component
-const styles = (() => {
+let styles = (() => {
    return {
       box:{
          background:lightGreen400,
