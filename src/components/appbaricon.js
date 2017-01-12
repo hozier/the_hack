@@ -4,10 +4,7 @@ import OctoCat from "./octocat"
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
-import {getStyles} from "./styles"
 import {lightGreen400} from 'material-ui/styles/colors';
-
-const styles = getStyles()
 
 class AppBarIcon extends React.Component{
    constructor(props){
@@ -21,8 +18,7 @@ class AppBarIcon extends React.Component{
       return(
          <div style={{fontWeight: '100'}}>
          <AppBar
-         iconElementRight={<OctoCat></OctoCat>}
-
+         iconElementRight={<OctoCat/>}
          style={styles.appBar}
          onLeftIconButtonTouchTap={this.handleToggle}
          zDepth={0}
@@ -43,5 +39,16 @@ class AppBarIcon extends React.Component{
       )
    }
 }
+
+// overview: defines styles used locally only for this component
+let styles = (()=> {
+   return {
+      appBar: {
+         position: 'fixed',
+         titleFontWeight: 100,
+         fontFamily: 'sans-serif-thin'
+      }
+   }
+})()
 
 export default AppBarIcon
