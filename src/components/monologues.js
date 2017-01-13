@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import withWidth from 'material-ui/utils/withWidth';
 import FlatButton from 'material-ui/FlatButton';
 import Playground from "./playground"
 
@@ -36,4 +37,5 @@ const MonologuesPage = () => (
    />
 );
 
-export default MonologuesPage;
+
+export default withWidth()(MonologuesPage);

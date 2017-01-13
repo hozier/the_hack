@@ -6,13 +6,14 @@ import RaisedButton from 'material-ui/RaisedButton';
 import withWidth from 'material-ui/utils/withWidth';
 import Hozier from "./img/csseuxui-128.jpg"
 import Playground from "./playground"
+import {Link} from 'react-router';
 
 class Homepage extends React.Component {
    constructor(props){
       super(props)
       this.state = {
          tags: ['design', 'solutions', 'code', 'curiosity',
-         'imagination', 'discovery']
+         'imagination', 'discovery', 'algorithms']
       }
    }
 
@@ -53,8 +54,11 @@ class Homepage extends React.Component {
                   />
                <h1>  / the_hack > </h1>
                <p>An Anthology of Thoughts Sewn Together by <b>#{this.state.tags[0]}</b></p>
-               <RaisedButton label="Explore"
-                  style={{marginBottom:40}}/>
+               <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
+                  <RaisedButton label="Explore"
+                     style={{marginBottom:40}}/>
+               </Link>
+
             </div>
 
 
