@@ -34,7 +34,7 @@ class Homepage extends React.Component {
    componentDidMount() {
       this.timerID = setInterval(
          () => this.tick(),
-         500
+         400
       );
    }
 

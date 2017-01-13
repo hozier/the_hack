@@ -1,9 +1,9 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Homepage from "./homepage"
+import HomePage from "./homepage"
 
 module.exports = {
-   Homepage,
+   HomePage,
    getMuiTheme,
    MuiThemeProvider,
 }

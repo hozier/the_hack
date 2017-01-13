@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './components/app'; // Our custom react component
-import {Homepage } from "./components/lockerbox"
+import {HomePage } from "./components/lockerbox"
 import { IndexRoute, Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import './index.css';
 
@@ -13,9 +13,14 @@ injectTapEventPlugin();
 ReactDOM.render(
    <Router history={hashHistory}>
       <Route path="/" component={App}>
-          <IndexRoute component={Homepage}/>
 
+         <IndexRoute component={HomePage}/>
+         {/*
+            <Route path="monologues" component={MonologuesPage} />
+            <Route path="projects" component={ProjectsPage} />
+            <Route path="other" component={OtherPage} />
+         */}
       </Route>
    </Router>,
-  document.getElementById('root')
+   document.getElementById('root')
 );
