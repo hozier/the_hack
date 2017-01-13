@@ -5,6 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
 import {lightGreen400} from 'material-ui/styles/colors';
+import {Link} from 'react-router';
 
 class AppBarIcon extends React.Component{
    constructor(props){
@@ -26,12 +27,17 @@ class AppBarIcon extends React.Component{
 
 
          <Drawer open={this.state.open}>
-         <Subheader style={
-            {cursor: 'pointer', paddingTop: 16, color:'#ffffff',
-            background:lightGreen400, fontWeight: '100'}}
-            onTouchTap={this.handleToggle} >/ the_hack >
-         </Subheader>
-         <MenuItem>Monologues of An Engineer</MenuItem>
+         <Link to={"/"} style={{ textDecoration: 'none' }} >
+            <Subheader style={
+               {cursor: 'pointer', paddingTop: 16, color:'#ffffff',
+               background:lightGreen400, fontWeight: '100'}}
+               onTouchTap={this.handleToggle} >/ the_hack >
+            </Subheader>
+         </Link>
+
+         <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
+            <MenuItem>Monologues of An Engineer</MenuItem>
+         </Link>
          <MenuItem>Projects</MenuItem>
          <MenuItem>About</MenuItem>
          </Drawer>

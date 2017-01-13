@@ -33,7 +33,6 @@ const MonologuesPage = () => (
       }
 
       maxWidth={900}
-
    />
 );
 

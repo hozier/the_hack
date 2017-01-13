@@ -15,8 +15,9 @@ ReactDOM.render(
       <Route path="/" component={App}>
 
          <IndexRoute component={HomePage}/>
-         {/*
             <Route path="monologues" component={MonologuesPage} />
+
+         {/*
             <Route path="projects" component={ProjectsPage} />
             <Route path="other" component={OtherPage} />
          */}
