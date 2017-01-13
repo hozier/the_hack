@@ -55,7 +55,7 @@ class Homepage extends React.Component {
                <h1>  / the_hack > </h1>
 
 
-               <p>An Anthology of Thoughts Stitched Together by <b>#{this.state.tags[0]}</b></p>
+               <p>An Anthology of Thoughts Sewn Together by <b>#{this.state.tags[0]}</b></p>
                <RaisedButton label="Explore"
                   style={{marginBottom:40}}/>
             </div>

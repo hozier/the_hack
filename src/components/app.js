@@ -6,8 +6,7 @@ import {deepOrange500, lightGreen400}
 from 'material-ui/styles/colors';
 import React, {Component} from 'react';
 import AppBarIcon from "./appbaricon"
-import {Homepage,
-   getMuiTheme, MuiThemeProvider}
+import {getMuiTheme, MuiThemeProvider}
    from "./lockerbox"
 
 const muiTheme = getMuiTheme({
@@ -24,7 +23,7 @@ class App extends Component {
          <MuiThemeProvider muiTheme={muiTheme}>
          <div style={{fontWeight: '100'}}>
             <AppBarIcon/>
-            <Homepage/>
+            {this.props.children}
          </div>
          </MuiThemeProvider>
       );
