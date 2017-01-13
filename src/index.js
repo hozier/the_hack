@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './components/app'; // Our custom react component
 import {HomePage } from "./components/lockerbox"
-import { IndexRoute, Router, Route, hashHistory, IndexRedirect } from 'react-router';
+import { IndexRoute, Router, Route, hashHistory } from 'react-router';
 import './index.css';
 
 // Needed for onTouchTap

@@ -14,6 +14,7 @@ component | type | description
 &lt;OctoCat/&gt; | svg | renders GitHub's OctoCat to view
 &lt;App/&gt; | spa core | brings together the core rendering logic of the single-page app
 &lt;Homepage/&gt; | spa core | implements the underlying media content for the homepage
+&lt;Playground/&gt; | spa util | leverages an internal component to render minimally styled, yet elegant text-blocks to view
 &lt;lockerbox/&gt; | interface | defines an interface through which bulk imports can be made  
 
 ###### (c) Run
