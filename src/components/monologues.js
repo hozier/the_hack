@@ -13,7 +13,16 @@
 
       datastore = () => {
          const array = [
-               {
+                  {
+                        titleCardHeader:"P. William Hozier",
+                        subtitleCardHeader:"Janurary 22, 2017",
+
+                        titleCardTitle:"Component-Driven Development",
+                        subtitleCardTitle:"Thinking in ReactJS with NodeJS + Material Design",
+                        imgSrc:'https://i.ytimg.com/vi/mFEoarLnnqM/maxresdefault.jpg',
+                        CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                  },
+                  {
                         titleCardHeader:"P. William Hozier",
                         subtitleCardHeader:"Janurary 22, 2017",
 
@@ -34,7 +43,7 @@
                   key={i}
                   payload={
                      <div>
-                        <h2 style={{fontWeight: '100', lineHeight: '50px' }}>An Engineer's Monologue</h2>
+                        {i == 0 && <h2 style={{fontWeight: '100', lineHeight: '50px' }}>An Engineer's Monologue</h2>}
                         <Card>
                            <CardHeader
                               title={eachParam.titleCardHeader}
