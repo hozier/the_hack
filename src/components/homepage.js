@@ -53,7 +53,8 @@ class Homepage extends React.Component {
                   size={300}
                   />
                <h1>  / the_hack > </h1>
-               <p>An Anthology of Thoughts Sewn Together by <b>#{this.state.tags[0]}</b></p>
+               <p>An Anthology of Thoughts Sewn Together by </p>
+               <p style={{letterSpacing: 4}}><b>#{this.state.tags[0]}</b></p><br/>
                <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
                   <RaisedButton label="Explore"
                      style={{marginBottom:40}}/>
