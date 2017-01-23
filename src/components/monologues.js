@@ -14,20 +14,18 @@
       datastore = () => {
          const array = [
                   {
-                        titleCardHeader:"P. William Hozier",
-                        subtitleCardHeader:"Janurary 22, 2017",
-
-                        titleCardTitle:"Component-Driven Development",
-                        subtitleCardTitle:"Thinking in ReactJS with NodeJS + Material Design",
+                        cardHeaderTitle:"P. William Hozier",
+                        cardHeaderSubtitle:"Janurary 22, 2017",
+                        cardTitleTitle:"Component-Driven Development",
+                        cardTitleSubtitle:"Thinking in ReactJS with NodeJS + Material Design",
                         imgSrc:'https://i.ytimg.com/vi/mFEoarLnnqM/maxresdefault.jpg',
                         CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
                   },
                   {
-                        titleCardHeader:"P. William Hozier",
-                        subtitleCardHeader:"Janurary 22, 2017",
-
-                        titleCardTitle:"Component-Driven Development",
-                        subtitleCardTitle:"Thinking in ReactJS with NodeJS + Material Design",
+                        cardHeaderTitle:"P. William Hozier",
+                        cardHeaderSubtitle:"Janurary 22, 2017",
+                        cardTitleTitle:"Component-Driven Development",
+                        cardTitleSubtitle:"Thinking in ReactJS with NodeJS + Material Design",
                         imgSrc:'https://i.ytimg.com/vi/mFEoarLnnqM/maxresdefault.jpg',
                         CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
                   }
@@ -38,7 +36,7 @@
       data = this.datastore()
 
       render(){
-         var cards = this.data.map((eachParam, i) => {
+         var cards = this.data.map((row, i) => {
          return <Playground
                   key={i}
                   payload={
@@ -46,17 +44,17 @@
                         {i == 0 && <h2 style={{fontWeight: '100', lineHeight: '50px' }}>An Engineer's Monologue</h2>}
                         <Card>
                            <CardHeader
-                              title={eachParam.titleCardHeader}
-                              subtitle={eachParam.subtitleCardHeader}
+                              title={row.cardHeaderTitle}
+                              subtitle={row.cardHeaderSubtitle}
                               avatar={Hozier}
                               />
                            <CardMedia
-                              overlay={<CardTitle title={eachParam.titleCardTitle} subtitle={eachParam.subtitleCardTitle} />}
+                              overlay={<CardTitle title={row.cardTitleTitle} subtitle={row.cardTitleSubtitle} />}
                               >
-                              <img src={eachParam.imgSrc} />
+                              <img src={row.imgSrc} />
                            </CardMedia>
                            <CardText>
-                              {eachParam.CardText}
+                              {row.CardText}
                            </CardText>
                         </Card>
                      </div>
