@@ -6,7 +6,7 @@ import Playground from "./playground"
 import Hozier from "./img/csseuxui-128.jpg"
 import Technologies from "./img/THxTPC_600-337.png"
 import Paper from 'material-ui/Paper';
-import {grey200} from 'material-ui/styles/colors';
+import {lightGreen400, grey200} from 'material-ui/styles/colors';
 
 
 class ProjectsPage extends React.Component{
@@ -26,7 +26,7 @@ class ProjectsPage extends React.Component{
             zDepth:3
          },
          {
-            cardHeaderTitle:"CMPSCI377 Labs",
+            cardHeaderTitle:"Operating Systems in C",
             zDepth:4
          },
          {
@@ -47,13 +47,16 @@ class ProjectsPage extends React.Component{
             margin: 20,
             textAlign: 'center',
             display: 'inline-block',
+            backgroundColor: '#eeeeee'
          }
       };
    })()
 
    render(){
       var cards = this.data.map((row, i) => {
-         return  <Paper key={i} style={this.styles.papers} zDepth={row.zDepth} rounded={false}><h3 style={{fontSize:18}}>{row.cardHeaderTitle}</h3></Paper>
+         return  <Paper key={i} style={this.styles.papers} zDepth={row.zDepth} rounded={false}><h3 style={{fontSize:18}}>{row.cardHeaderTitle}</h3>
+            <div style={{backgroundColor: '#455a64', height: 263}}></div>
+         </Paper>
       })
 
       return <Playground
