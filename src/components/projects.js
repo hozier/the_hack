@@ -1,12 +1,11 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import Avatar from 'material-ui/Avatar';
 import withWidth from 'material-ui/utils/withWidth';
-import FlatButton from 'material-ui/FlatButton';
 import Playground from "./playground"
 import Hozier from "./img/csseuxui-128.jpg"
-import Technologies from "./img/THxTPC_600-337.png"
 import Paper from 'material-ui/Paper';
 import {lightGreen400, grey200} from 'material-ui/styles/colors';
+import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
 
 
 class ProjectsPage extends React.Component{
@@ -55,7 +54,14 @@ class ProjectsPage extends React.Component{
    render(){
       var cards = this.data.map((row, i) => {
          return  <Paper key={i} style={this.styles.papers} zDepth={row.zDepth} rounded={false}><h3 style={{fontSize:18}}>{row.cardHeaderTitle}</h3>
-            <div style={{backgroundColor: '#455a64', height: 263}}></div>
+            <div style={{backgroundColor: '#455a64', height: 230, paddingTop: 40}}>
+               <Avatar
+                  icon={<Fingerprint />}
+                  backgroundColor={'#455a64'}
+                  color={'#ffffff'}
+                  size={200}
+                  />
+            </div>
          </Paper>
       })
 
