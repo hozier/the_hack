@@ -38,7 +38,10 @@ class AppBarIcon extends React.Component{
          <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
             <MenuItem>Monologues of An Engineer</MenuItem>
          </Link>
-         <MenuItem>Projects</MenuItem>
+
+         <Link to={"/projects/"} style={{ textDecoration: 'none' }} >
+            <MenuItem>Projects</MenuItem>
+         </Link>
          <MenuItem>About</MenuItem>
          </Drawer>
          </div>
