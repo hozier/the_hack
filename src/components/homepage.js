@@ -49,7 +49,7 @@ class Homepage extends React.Component {
                <Avatar
                   icon={<Fingerprint />}
                   backgroundColor={lightGreen400}
-                  color={'#ffffff'}
+                  color={'#455a64'}
                   size={300}
                   />
                <h1>  / the_hack > </h1>

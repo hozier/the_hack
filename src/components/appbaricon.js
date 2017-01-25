@@ -29,14 +29,14 @@ class AppBarIcon extends React.Component{
          <Drawer open={this.state.open}>
          <Link to={"/"} style={{ textDecoration: 'none' }} >
             <Subheader style={
-               {cursor: 'pointer', paddingTop: 16, color:'#ffffff',
-               background:lightGreen400, fontWeight: '100'}}
+               {cursor: 'pointer', paddingTop: 16, color:'#455a64',
+               background:lightGreen400, }}
                onTouchTap={this.handleToggle} >/ the_hack >
             </Subheader>
          </Link>
 
          <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
-            <MenuItem>Monologues of An Engineer</MenuItem>
+            <MenuItem>Monologues</MenuItem>
          </Link>
 
          <Link to={"/projects/"} style={{ textDecoration: 'none' }} >
