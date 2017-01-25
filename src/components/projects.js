@@ -3,7 +3,9 @@ import Avatar from 'material-ui/Avatar';
 import withWidth from 'material-ui/utils/withWidth';
 import Playground from "./playground"
 import Paper from 'material-ui/Paper';
-import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
+import Academic from 'material-ui/svg-icons/action/description';
+import Collab from 'material-ui/svg-icons/action/dashboard';
+import Code from 'material-ui/svg-icons/action/code';
 
 class ProjectsPage extends React.Component{
    styles = (() => {
@@ -86,7 +88,7 @@ class ProjectsPage extends React.Component{
 
    data = this.datastore()
 
-   paperEngine = (collection, handleMouseEnter, handleMouseLeave, zDepth) => {
+   paperEngine = (collection, handleMouseEnter, handleMouseLeave, zDepth, svg) => {
       var cards = collection.map((row, i) => {
          return(
             <Paper key={i} style={this.styles.papers} rounded={false}
@@ -99,7 +101,7 @@ class ProjectsPage extends React.Component{
                <a href={row.url}>
                   <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: '#455a64', height: 230, paddingTop: 40}}>
                      <Avatar
-                        icon={<Fingerprint />}
+                        icon={svg}
                         backgroundColor={'#455a64'}
                         color={'#ffffff'}
                         size={200}
@@ -114,7 +116,7 @@ class ProjectsPage extends React.Component{
    }
 
    render(){
-      var cards = this.paperEngine(this.data, this.handleMouseEnter0, this.handleMouseLeave0, this.state.zDepth0)
+      var cards = this.paperEngine(this.data, this.handleMouseEnter0, this.handleMouseLeave0, this.state.zDepth0, <Code></Code>)
       const base = 'https://github.com/hozier/'
 
       return (
@@ -136,7 +138,7 @@ class ProjectsPage extends React.Component{
                               zDepth:4,
                               url:`${base}labs.cmpsci377`
                            }],
-                           this.handleMouseEnter1, this.handleMouseLeave1, this.state.zDepth1)
+                           this.handleMouseEnter1, this.handleMouseLeave1, this.state.zDepth1, <Academic/>)
                         }
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Collaborative</h2>
                      {
@@ -145,7 +147,7 @@ class ProjectsPage extends React.Component{
                            zDepth:1,
                            url:'https://github.com/mbdtui/DataDash'
                         }],
-                        this.handleMouseEnter2, this.handleMouseLeave2, this.state.zDepth2)
+                        this.handleMouseEnter2, this.handleMouseLeave2, this.state.zDepth2, <Collab/>)
                      }
                   </div>
                }
