@@ -2,28 +2,65 @@ import React from 'react';
 import Avatar from 'material-ui/Avatar';
 import withWidth from 'material-ui/utils/withWidth';
 import Playground from "./playground"
-import Hozier from "./img/csseuxui-128.jpg"
 import Paper from 'material-ui/Paper';
-import {lightGreen400, grey200} from 'material-ui/styles/colors';
 import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
-import {Link} from 'react-router';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
-
 
 class ProjectsPage extends React.Component{
+   styles = (() => {
+      return {
+         papers:{
+            height: 325,
+            width: 300,
+            margin: 20,
+            textAlign: 'center',
+            display: 'inline-block',
+            backgroundColor: '#eeeeee'
+         }
+      };
+   })()
+
    state = {
-      open: false,
+       zDepth0: 1,
+       zDepth1: 1,
+       zDepth2: 1
    };
 
-   handleOpen = () => {
-      this.setState({open: true});
+   handleMouseEnter0 = () => {
+     this.setState({
+       zDepth0: 5,
+     });
    };
 
-   handleClose = () => {
-      this.setState({open: false});
+   handleMouseLeave0 = () => {
+     this.setState({
+       zDepth0: 1,
+     });
    };
+
+   handleMouseEnter1 = () => {
+     this.setState({
+       zDepth1: 5,
+     });
+   };
+
+   handleMouseLeave1 = () => {
+     this.setState({
+       zDepth1: 1,
+     });
+   };
+
+   handleMouseEnter2 = () => {
+     this.setState({
+       zDepth2: 5,
+     });
+   };
+
+   handleMouseLeave2 = () => {
+     this.setState({
+       zDepth2: 1,
+     });
+   };
+
 
    datastore = () => {
       const base = 'https://github.com/hozier/'
@@ -39,16 +76,6 @@ class ProjectsPage extends React.Component{
             url:`${base}the_hack`
          },
          {
-            cardHeaderTitle:"Longest Repeated String",
-            zDepth:3,
-            url:`${base}Longest_repeated_substring`
-         },
-         {
-            cardHeaderTitle:"Operating Systems in C",
-            zDepth:4,
-            url:`${base}labs.cmpsci377`
-         },
-         {
             cardHeaderTitle:"RESTful APIs",
             zDepth:5,
             url:`${base}RESTful_API`
@@ -59,71 +86,71 @@ class ProjectsPage extends React.Component{
 
    data = this.datastore()
 
-   styles = (() => {
-      return {
-         papers:{
-            height: 325,
-            width: 300,
-            margin: 20,
-            textAlign: 'center',
-            display: 'inline-block',
-            backgroundColor: '#eeeeee'
-         }
-      };
-   })()
+   paperEngine = (collection, handleMouseEnter, handleMouseLeave, zDepth) => {
+      var cards = collection.map((row, i) => {
+         return(
+            <Paper key={i} style={this.styles.papers} rounded={false}
+                     zDepth={zDepth}
+                     onMouseEnter={handleMouseEnter}
+                     onMouseLeave={handleMouseLeave}>
+               <h3 style={{fontSize:18}}>{row.cardHeaderTitle}</h3>
+
+
+               <a href={row.url}>
+                  <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: '#455a64', height: 230, paddingTop: 40}}>
+                     <Avatar
+                        icon={<Fingerprint />}
+                        backgroundColor={'#455a64'}
+                        color={'#ffffff'}
+                        size={200}
+                        />
+                  </div>
+               </a>
+            </Paper>
+         )
+      })
+
+      return cards
+   }
 
    render(){
-      const actions = [
-         <FlatButton
-            label="Cancel"
-            primary={true}
-            onTouchTap={this.handleClose}
-            />,
-         <FlatButton
-            label="Submit"
-            primary={true}
-            keyboardFocused={true}
-            onTouchTap={this.handleClose}
-            />,
-      ];
-
-      var cards = this.data.map((row, i) => {
-         return  <Paper key={i} style={this.styles.papers} zDepth={row.zDepth} rounded={false}>
-            <h3 style={{fontSize:18}}>{row.cardHeaderTitle}</h3>
-
-
-            <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: '#455a64', height: 230, paddingTop: 40}}>
-               <Avatar
-                  icon={<Fingerprint />}
-                  backgroundColor={'#455a64'}
-                  color={'#ffffff'}
-                  size={200}
-                  />
-            </div>
-         </Paper>
-      })
+      var cards = this.paperEngine(this.data, this.handleMouseEnter0, this.handleMouseLeave0, this.state.zDepth0)
+      const base = 'https://github.com/hozier/'
 
       return (
          <div>
             <Playground
                payload={
                   <div>
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects</h2>
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Apps & Services</h2>
                      {cards}
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Academic</h2>
+                        {
+                           this.paperEngine([{
+                              cardHeaderTitle:"Longest Repeated String",
+                              zDepth:3,
+                              url:`${base}Longest_repeated_substring`
+                           },
+                           {
+                              cardHeaderTitle:"Operating Systems in C",
+                              zDepth:4,
+                              url:`${base}labs.cmpsci377`
+                           }],
+                           this.handleMouseEnter1, this.handleMouseLeave1, this.state.zDepth1)
+                        }
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Collaborative</h2>
+                     {
+                        this.paperEngine([ {
+                           cardHeaderTitle:"DataDash by MBDTUI",
+                           zDepth:1,
+                           url:'https://github.com/mbdtui/DataDash'
+                        }],
+                        this.handleMouseEnter2, this.handleMouseLeave2, this.state.zDepth2)
+                     }
                   </div>
                }
                maxWidth={1100}
                />
-
-            <Dialog
-               title="Dialog With Actions"
-               actions={actions}
-               modal={false}
-               open={this.state.open}
-               onRequestClose={this.handleClose}
-               >
-               The actions in this window were passed in as an array of React objects.
-            </Dialog>
          </div>
       )
    }
