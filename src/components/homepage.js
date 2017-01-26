@@ -1,6 +1,6 @@
 import React from 'react'
 import Avatar from 'material-ui/Avatar';
-import {lightGreen400, pink300} from 'material-ui/styles/colors';
+import {lime500, pink300} from 'material-ui/styles/colors';
 import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
 import RaisedButton from 'material-ui/RaisedButton';
 import withWidth from 'material-ui/utils/withWidth';
@@ -48,7 +48,7 @@ class Homepage extends React.Component {
             <div style={styles.box}>
                <Avatar
                   icon={<Fingerprint />}
-                  backgroundColor={lightGreen400}
+                  backgroundColor={lime500}
                   color={'#455a64'}
                   size={300}
                   />
@@ -90,7 +90,7 @@ class Homepage extends React.Component {
 let styles = (() => {
    return {
       box:{
-         background:lightGreen400,
+         background:lime500,
          margin: 0,
          right: 0,
          left: 'auto',
