@@ -1,14 +1,10 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import withWidth from 'material-ui/utils/withWidth';
-import FlatButton from 'material-ui/FlatButton';
 import Playground from "./playground"
-import Hozier from "./img/csseuxui-128.jpg"
-import Technologies from "./img/THxTPC_600-337.png"
-import Avatar from 'material-ui/Avatar';
 import Build from 'material-ui/svg-icons/device/widgets';
 import Code from 'material-ui/svg-icons/maps/layers';
 import {redA200} from 'material-ui/styles/colors';
+import MonologueEngine from "./monologueEngine"
 
 class MonologuesPage extends React.Component{
 
@@ -42,48 +38,20 @@ class MonologuesPage extends React.Component{
    data = this.datastore()
 
    render(){
-      var cards = this.data.map((row, i) => {
-         return <div>
-            <Card>
-               <CardHeader
-                  title={row.cardHeaderTitle}
-                  subtitle={row.cardHeaderSubtitle}
-                  avatar={Hozier}
-                  />
-
-               <CardMedia
-                  style={{backgroundColor: row.backgroundColor}}
-                  overlay={<CardTitle title={row.cardBodyTitle} subtitle={row.cardBodySubtitle} />}
-                  >
-                  <Avatar
-                     icon={row.imgSrc}
-                     backgroundColor={row.backgroundColor}
-                     color={row.svgColor}
-                     size={400}
-                  />
-               </CardMedia>
-
-               <CardText>
-                  {row.CardText}
-               </CardText>
-            </Card>
-
-            <br></br>
-            <br></br>
-         </div>
-      }
-   )
-
-   return <Playground
-      payload={
+      return (
          <div>
-            <h2 style={{fontWeight: '100', lineHeight: '50px' }}>An Engineer's Monologue</h2>
-            {cards}
+            <Playground
+               payload={
+                     this.data.map((row, i) => {
+                           return <MonologueEngine key={i} collection={[row]}></MonologueEngine>
+                     })
+                  }     
+
+               maxWidth={900}
+               />
          </div>
-      }
-      maxWidth={900}
-      />
-}
+      )
+   }
 };
 
 

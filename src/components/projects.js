@@ -6,7 +6,6 @@ import Collab from 'material-ui/svg-icons/action/dashboard';
 import Code from 'material-ui/svg-icons/action/code';
 import PaperEngine from "./paperEngine"
 
-
 class ProjectsPage extends React.Component{
 
    datastore = () => {

@@ -1,5 +1,4 @@
 import React from 'react';
-import Playground from "./playground"
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 
