@@ -1,8 +1,6 @@
 import React from 'react';
-import Avatar from 'material-ui/Avatar';
 import withWidth from 'material-ui/utils/withWidth';
 import Playground from "./playground"
-import Paper from 'material-ui/Paper';
 import Academic from 'material-ui/svg-icons/action/description';
 import Collab from 'material-ui/svg-icons/action/dashboard';
 import Code from 'material-ui/svg-icons/action/code';
@@ -51,20 +49,24 @@ class ProjectsPage extends React.Component{
    data = this.datastore()
 
    render(){
-      this.cards = this.data.map((row, i) => {
-            return <PaperEngine key={i} collection={[row]} svg={ <Code/> }></PaperEngine>
-      })
       return (
          <div>
             <Playground
                payload={
                   <div>
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Apps & Services</h2>
-                        {this.cards.slice(0,0+2 +1)}
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Academic</h2>
-                        {this.cards.slice(3,3+1 +1) }
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Collaborative</h2>
-                        {this.cards.slice(5) }
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Apps & Services</h2>{
+                        this.data.slice(0,0+2 +1).map((row, i) => {
+                              return <PaperEngine key={i} collection={[row]} svg={ <Code/> }></PaperEngine>
+                        })}
+
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Academic</h2>{
+                        this.data.slice(3,3+1 +1).map((row, i) => {
+                              return <PaperEngine key={i} collection={[row]} svg={ <Academic/> }></PaperEngine>
+                        })}
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Collaborative</h2>{
+                        this.data.slice(5).map((row, i) => {
+                              return <PaperEngine key={i} collection={[row]} svg={ <Collab/> }></PaperEngine>
+                        })}
                   </div>
                }
                maxWidth={1100}
