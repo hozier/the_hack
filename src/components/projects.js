@@ -82,6 +82,21 @@ class ProjectsPage extends React.Component{
             zDepth:5,
             url:`${base}RESTful_API`
          },
+         {
+            cardHeaderTitle:"Longest Repeated String",
+            zDepth:3,
+            url:`${base}Longest_repeated_substring`
+         },
+         {
+            cardHeaderTitle:"Operating Systems in C",
+            zDepth:4,
+            url:`${base}labs.cmpsci377`
+         },
+         {
+            cardHeaderTitle:"DataDash by MBDTUI",
+            zDepth:1,
+            url:'https://github.com/mbdtui/DataDash'
+         }
       ]
       return array
    }
@@ -116,39 +131,18 @@ class ProjectsPage extends React.Component{
    }
 
    render(){
-      var cards = this.paperEngine(this.data, this.handleMouseEnter0, this.handleMouseLeave0, this.state.zDepth0, <Code></Code>)
-      const base = 'https://github.com/hozier/'
-
+      var cards = this.paperEngine(this.data.slice(0,0+2 +1), this.handleMouseEnter0, this.handleMouseLeave0, this.state.zDepth0, <Code/>)
       return (
          <div>
             <Playground
                payload={
                   <div>
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Apps & Services</h2>
-                     {cards}
+                        {cards}
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Academic</h2>
-                        {
-                           this.paperEngine([{
-                              cardHeaderTitle:"Longest Repeated String",
-                              zDepth:3,
-                              url:`${base}Longest_repeated_substring`
-                           },
-                           {
-                              cardHeaderTitle:"Operating Systems in C",
-                              zDepth:4,
-                              url:`${base}labs.cmpsci377`
-                           }],
-                           this.handleMouseEnter1, this.handleMouseLeave1, this.state.zDepth1, <Academic/>)
-                        }
+                        { this.paperEngine(this.data.slice(3,3+1 +1), this.handleMouseEnter1, this.handleMouseLeave1, this.state.zDepth1, <Academic/>) }
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Collaborative</h2>
-                     {
-                        this.paperEngine([ {
-                           cardHeaderTitle:"DataDash by MBDTUI",
-                           zDepth:1,
-                           url:'https://github.com/mbdtui/DataDash'
-                        }],
-                        this.handleMouseEnter2, this.handleMouseLeave2, this.state.zDepth2, <Collab/>)
-                     }
+                        { this.paperEngine(this.data.slice(5), this.handleMouseEnter2, this.handleMouseLeave2, this.state.zDepth2, <Collab/>) }
                   </div>
                }
                maxWidth={1100}
