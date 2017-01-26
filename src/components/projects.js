@@ -6,63 +6,10 @@ import Paper from 'material-ui/Paper';
 import Academic from 'material-ui/svg-icons/action/description';
 import Collab from 'material-ui/svg-icons/action/dashboard';
 import Code from 'material-ui/svg-icons/action/code';
+import PaperEngine from "./paperEngine"
+
 
 class ProjectsPage extends React.Component{
-   styles = (() => {
-      return {
-         papers:{
-            height: 325,
-            width: 300,
-            margin: 20,
-            textAlign: 'center',
-            display: 'inline-block',
-            backgroundColor: '#eeeeee'
-         }
-      };
-   })()
-
-   state = {
-       zDepth0: 1,
-       zDepth1: 1,
-       zDepth2: 1
-   };
-
-   handleMouseEnter0 = () => {
-     this.setState({
-       zDepth0: 5,
-     });
-   };
-
-   handleMouseLeave0 = () => {
-     this.setState({
-       zDepth0: 1,
-     });
-   };
-
-   handleMouseEnter1 = () => {
-     this.setState({
-       zDepth1: 5,
-     });
-   };
-
-   handleMouseLeave1 = () => {
-     this.setState({
-       zDepth1: 1,
-     });
-   };
-
-   handleMouseEnter2 = () => {
-     this.setState({
-       zDepth2: 5,
-     });
-   };
-
-   handleMouseLeave2 = () => {
-     this.setState({
-       zDepth2: 1,
-     });
-   };
-
 
    datastore = () => {
       const base = 'https://github.com/hozier/'
@@ -103,46 +50,21 @@ class ProjectsPage extends React.Component{
 
    data = this.datastore()
 
-   paperEngine = (collection, handleMouseEnter, handleMouseLeave, zDepth, svg) => {
-      var cards = collection.map((row, i) => {
-         return(
-            <Paper key={i} style={this.styles.papers} rounded={false}
-                     zDepth={zDepth}
-                     onMouseEnter={handleMouseEnter}
-                     onMouseLeave={handleMouseLeave}>
-               <h3 style={{fontSize:18}}>{row.cardHeaderTitle}</h3>
-
-
-               <a href={row.url}>
-                  <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: '#455a64', height: 230, paddingTop: 40}}>
-                     <Avatar
-                        icon={svg}
-                        backgroundColor={'#455a64'}
-                        color={'#ffffff'}
-                        size={200}
-                        />
-                  </div>
-               </a>
-            </Paper>
-         )
-      })
-
-      return cards
-   }
-
    render(){
-      var cards = this.paperEngine(this.data.slice(0,0+2 +1), this.handleMouseEnter0, this.handleMouseLeave0, this.state.zDepth0, <Code/>)
+      this.cards = this.data.map((row, i) => {
+            return <PaperEngine key={i} collection={[row]} svg={ <Code/> }></PaperEngine>
+      })
       return (
          <div>
             <Playground
                payload={
                   <div>
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Apps & Services</h2>
-                        {cards}
+                        {this.cards.slice(0,0+2 +1)}
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Academic</h2>
-                        { this.paperEngine(this.data.slice(3,3+1 +1), this.handleMouseEnter1, this.handleMouseLeave1, this.state.zDepth1, <Academic/>) }
+                        {this.cards.slice(3,3+1 +1) }
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Collaborative</h2>
-                        { this.paperEngine(this.data.slice(5), this.handleMouseEnter2, this.handleMouseLeave2, this.state.zDepth2, <Collab/>) }
+                        {this.cards.slice(5) }
                   </div>
                }
                maxWidth={1100}
