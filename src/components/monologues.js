@@ -42,11 +42,13 @@ class MonologuesPage extends React.Component{
          <div>
             <Playground
                payload={
-                     this.data.map((row, i) => {
+                  <div>
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>An Engineer's Monologue</h2>
+                     {this.data.map((row, i) => {
                            return <MonologueEngine key={i} collection={[row]}></MonologueEngine>
-                     })
-                  }     
-
+                     })}
+                  </div>
+               }
                maxWidth={900}
                />
          </div>
