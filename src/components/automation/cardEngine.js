@@ -29,11 +29,12 @@ class MonologueEngine extends React.Component{
                   zDepth={this.state.zDepth}
                   onMouseEnter={this.handleMouseEnter}
                   onMouseLeave={this.handleMouseLeave}>
-                  <CardHeader
-                     title={row.cardHeaderTitle}
-                     subtitle={row.cardHeaderSubtitle}
-                     avatar={Hozier}
-                     />
+                  {row.imgSrc &&
+                     <CardHeader
+                        title={row.cardHeaderTitle}
+                        subtitle={row.cardHeaderSubtitle}
+                        avatar={Hozier}
+                        />}
 
                   {row.imgSrc && <CardMedia
                      style={{backgroundColor: row.backgroundColor}}
@@ -46,6 +47,8 @@ class MonologueEngine extends React.Component{
                         size={400}
                      />
                   </CardMedia>}
+
+                  {!row.imgSrc && <CardTitle subtitle={`${row.cardBodyTitle} | ${row.cardBodySubtitle}`} />}
 
                   <CardText>
                      {row.CardText}

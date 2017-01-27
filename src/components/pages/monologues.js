@@ -34,8 +34,8 @@ class MonologuesPage extends React.Component{
          {
             cardHeaderTitle:"P. William Hozier",
             cardHeaderSubtitle:"Janurary 22, 2017",
-            cardBodyTitle:"",
-            cardBodySubtitle:"",
+            cardBodyTitle:"Thinking in C",
+            cardBodySubtitle:"Smarter Linked Lists",
             backgroundColor: powderedBlue,
             svgColor:grey600,
             imgSrc:undefined,
@@ -44,8 +44,8 @@ class MonologuesPage extends React.Component{
          {
             cardHeaderTitle:"P. William Hozier",
             cardHeaderSubtitle:"Janurary 22, 2017",
-            cardBodyTitle:"",
-            cardBodySubtitle:"",
+            cardBodyTitle:"Thinking in C",
+            cardBodySubtitle:"Graphs",
             backgroundColor: powderedBlue,
             svgColor:grey600,
             imgSrc:undefined,
