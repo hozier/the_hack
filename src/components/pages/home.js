@@ -9,6 +9,19 @@ import Playground from "../playground"
 import {Link} from 'react-router';
 
 class Homepage extends React.Component {
+   // overview: defines styles used locally only for this component
+   styles = (() => {
+      return {
+         box:{
+            background:lime500,
+            margin: 0,
+            right: 0,
+            left: 'auto',
+            textAlign: 'center',
+         }
+      };
+   })()
+
    constructor(props){
       super(props)
       this.state = {
@@ -45,7 +58,7 @@ class Homepage extends React.Component {
    render(){
       return(
          <div>
-            <div style={styles.box}>
+            <div style={this.styles.box}>
                <Avatar
                   icon={<Fingerprint />}
                   backgroundColor={lime500}
@@ -85,18 +98,5 @@ class Homepage extends React.Component {
       )
    }
 }
-
-// overview: defines styles used locally only for this component
-let styles = (() => {
-   return {
-      box:{
-         background:lime500,
-         margin: 0,
-         right: 0,
-         left: 'auto',
-         textAlign: 'center',
-      }
-   };
-})()
 
 export default withWidth()(Homepage);

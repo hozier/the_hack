@@ -8,6 +8,17 @@ import {lime500, grey800} from 'material-ui/styles/colors';
 import {Link} from 'react-router';
 
 class AppBarIcon extends React.Component{
+   // overview: defines styles used locally only for this component
+   styles = (()=> {
+      return {
+         appBar: {
+            position: 'fixed',
+            titleFontWeight: 100,
+            fontFamily: 'sans-serif-thin'
+         }
+      }
+   })()
+
    constructor(props){
       super(props)
       this.state = {open:false}
@@ -20,7 +31,7 @@ class AppBarIcon extends React.Component{
          <div style={{fontWeight: '100'}}>
          <AppBar
          iconElementRight={<OctoCat/>}
-         style={styles.appBar}
+         style={this.styles.appBar}
          onLeftIconButtonTouchTap={this.handleToggle}
          zDepth={0}
          />
@@ -48,16 +59,5 @@ class AppBarIcon extends React.Component{
       )
    }
 }
-
-// overview: defines styles used locally only for this component
-let styles = (()=> {
-   return {
-      appBar: {
-         position: 'fixed',
-         titleFontWeight: 100,
-         fontFamily: 'sans-serif-thin'
-      }
-   }
-})()
 
 export default AppBarIcon

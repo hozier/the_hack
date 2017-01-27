@@ -3,7 +3,7 @@ import withWidth from 'material-ui/utils/withWidth';
 import Playground from "../playground"
 import Build from 'material-ui/svg-icons/device/widgets';
 import Code from 'material-ui/svg-icons/maps/layers';
-import {redA200} from 'material-ui/styles/colors';
+import {redA200, grey600} from 'material-ui/styles/colors';
 import CardEngine from "../automation/cardEngine"
 
 class MonologuesPage extends React.Component{
@@ -27,8 +27,8 @@ class MonologuesPage extends React.Component{
             cardBodyTitle:"Thinking in C",
             cardBodySubtitle:"From Data Structures to Algorithms",
             backgroundColor: powderedBlue,
-            svgColor:redA200,
-            imgSrc:<div style ={{paddingTop: 110, fontFamily:'Times'}}>C</div>,
+            svgColor:grey600,
+            imgSrc:<div style={{paddingTop: 110, fontFamily:'Times'}}>C</div>,
             CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
          },
          {
