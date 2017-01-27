@@ -34,6 +34,26 @@ class MonologuesPage extends React.Component{
          {
             cardHeaderTitle:"P. William Hozier",
             cardHeaderSubtitle:"Janurary 22, 2017",
+            cardBodyTitle:"",
+            cardBodySubtitle:"",
+            backgroundColor: powderedBlue,
+            svgColor:grey600,
+            imgSrc:undefined,
+            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+         },
+         {
+            cardHeaderTitle:"P. William Hozier",
+            cardHeaderSubtitle:"Janurary 22, 2017",
+            cardBodyTitle:"",
+            cardBodySubtitle:"",
+            backgroundColor: powderedBlue,
+            svgColor:grey600,
+            imgSrc:undefined,
+            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+         },
+         {
+            cardHeaderTitle:"P. William Hozier",
+            cardHeaderSubtitle:"Janurary 22, 2017",
             cardBodyTitle:"Algorithms",
             cardBodySubtitle:"A Mathematical Science",
             backgroundColor:redA200,

@@ -35,7 +35,7 @@ class MonologueEngine extends React.Component{
                      avatar={Hozier}
                      />
 
-                  <CardMedia
+                  {row.imgSrc && <CardMedia
                      style={{backgroundColor: row.backgroundColor}}
                      overlay={<CardTitle title={row.cardBodyTitle} subtitle={row.cardBodySubtitle} />}
                      >
@@ -45,7 +45,7 @@ class MonologueEngine extends React.Component{
                         color={row.svgColor}
                         size={400}
                      />
-                  </CardMedia>
+                  </CardMedia>}
 
                   <CardText>
                      {row.CardText}
