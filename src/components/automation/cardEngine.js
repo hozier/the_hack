@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
-import Hozier from "./img/csseuxui-128.jpg"
+import Hozier from "../img/csseuxui-128.jpg"
 
 class MonologueEngine extends React.Component{
 

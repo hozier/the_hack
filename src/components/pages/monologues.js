@@ -1,10 +1,10 @@
 import React from 'react';
 import withWidth from 'material-ui/utils/withWidth';
-import Playground from "./playground"
+import Playground from "../playground"
 import Build from 'material-ui/svg-icons/device/widgets';
 import Code from 'material-ui/svg-icons/maps/layers';
 import {redA200} from 'material-ui/styles/colors';
-import MonologueEngine from "./monologueEngine"
+import CardEngine from "../automation/cardEngine"
 
 class MonologuesPage extends React.Component{
 
@@ -24,8 +24,18 @@ class MonologuesPage extends React.Component{
          {
             cardHeaderTitle:"P. William Hozier",
             cardHeaderSubtitle:"Janurary 22, 2017",
+            cardBodyTitle:"Thinking in C",
+            cardBodySubtitle:"From Data Structures to Algorithms",
+            backgroundColor: powderedBlue,
+            svgColor:redA200,
+            imgSrc:<div style ={{paddingTop: 110, fontFamily:'Times'}}>C</div>,
+            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+         },
+         {
+            cardHeaderTitle:"P. William Hozier",
+            cardHeaderSubtitle:"Janurary 22, 2017",
             cardBodyTitle:"Algorithms",
-            cardBodySubtitle:"A Mathemical Science",
+            cardBodySubtitle:"A Mathematical Science",
             backgroundColor:redA200,
             svgColor:powderedBlue,
             imgSrc:<Code/>,
@@ -45,7 +55,7 @@ class MonologuesPage extends React.Component{
                   <div>
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>An Engineer's Monologue</h2>
                      {this.data.map((row, i) => {
-                           return <MonologueEngine key={i} collection={[row]}></MonologueEngine>
+                           return <CardEngine key={i} collection={[row]}></CardEngine>
                      })}
                   </div>
                }

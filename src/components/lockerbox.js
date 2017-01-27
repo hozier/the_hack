@@ -1,8 +1,8 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import HomePage from "./homepage"
-import MonologuesPage from "./monologues"
-import ProjectsPage from "./projects"
+import HomePage from "./pages/home"
+import MonologuesPage from "./pages/monologues"
+import ProjectsPage from "./pages/projects"
 
 module.exports = {
    HomePage,

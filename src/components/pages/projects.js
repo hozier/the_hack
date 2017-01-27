@@ -1,10 +1,10 @@
 import React from 'react';
 import withWidth from 'material-ui/utils/withWidth';
-import Playground from "./playground"
+import Playground from "../playground"
 import Academic from 'material-ui/svg-icons/action/description';
 import Collab from 'material-ui/svg-icons/action/dashboard';
 import Code from 'material-ui/svg-icons/action/code';
-import PaperEngine from "./paperEngine"
+import PaperEngine from "../automation/paperEngine"
 
 class ProjectsPage extends React.Component{
 
