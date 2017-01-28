@@ -8,6 +8,7 @@ import React, {Component} from 'react';
 import AppBarIcon from "./appbaricon"
 import {getMuiTheme, MuiThemeProvider}
    from "./lockerbox"
+import Footer from "./footer"
 
 const muiTheme = getMuiTheme({
    palette: {
@@ -24,6 +25,7 @@ class App extends Component {
          <div style={{fontWeight: '100'}}>
             <AppBarIcon/>
             {this.props.children}
+            <Footer/>
          </div>
          </MuiThemeProvider>
       );
