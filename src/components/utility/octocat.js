@@ -1,6 +1,6 @@
 import React from 'react';
 import IconButton from 'material-ui/IconButton';
-import '../index.css';
+import '../../index.css';
 
 class OctoCat extends React.Component {
 

@@ -5,10 +5,10 @@
 import {deepOrange500, lime500}
 from 'material-ui/styles/colors';
 import React, {Component} from 'react';
-import AppBarIcon from "./appbaricon"
+import AppBarIcon from "./utility/appbaricon"
 import {getMuiTheme, MuiThemeProvider}
-   from "./lockerbox"
-import Footer from "./footer"
+   from "./utility/lockerbox"
+import Footer from "./utility/footer"
 
 const muiTheme = getMuiTheme({
    palette: {

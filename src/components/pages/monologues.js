@@ -1,6 +1,6 @@
 import React from 'react';
 import withWidth from 'material-ui/utils/withWidth';
-import Playground from "../playground"
+import Playground from "../utility/playground"
 import Build from 'material-ui/svg-icons/device/widgets';
 import Code from 'material-ui/svg-icons/maps/layers';
 import {redA200, grey600} from 'material-ui/styles/colors';

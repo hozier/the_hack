@@ -5,7 +5,7 @@ import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
 import RaisedButton from 'material-ui/RaisedButton';
 import withWidth from 'material-ui/utils/withWidth';
 import Hozier from "../img/csseuxui-128.jpg"
-import Playground from "../playground"
+import Playground from "../utility/playground"
 import {Link} from 'react-router';
 
 class Homepage extends React.Component {

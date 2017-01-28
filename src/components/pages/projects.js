@@ -1,6 +1,6 @@
 import React from 'react';
 import withWidth from 'material-ui/utils/withWidth';
-import Playground from "../playground"
+import Playground from "../utility/playground"
 import Academic from 'material-ui/svg-icons/action/description';
 import Collab from 'material-ui/svg-icons/action/dashboard';
 import Code from 'material-ui/svg-icons/action/code';

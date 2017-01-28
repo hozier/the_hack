@@ -1,5 +1,5 @@
 import React from 'react'
-import FullWidthSection from "./material-ui-internal-components/fullwidthsection.js"
+import FullWidthSection from "../material-ui-internal-components/fullwidthsection.js"
 import {grey200} from 'material-ui/styles/colors';
 import typography from 'material-ui/styles/typography';
 
