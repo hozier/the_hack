@@ -12,11 +12,13 @@ class Footer extends React.Component{
             <br/><br/><br/>
             {'< > with ♥ using NodeJS, ReactJS and Material-UI'}
 
-            <div style={{textAlign:'left', paddingLeft: 50, zDepth:5, fontSize:15}}>
+            <div style={{textAlign:'left', paddingLeft: 47, zDepth:5, fontSize:15}}>
                <br></br>
-               / the_hack > <span style={{fontFamily: 'Times', fontSize:12}}>by the Product <sup>co.</sup> est. 2015.</span> <br/>
+               / the_hack > <span style={{fontFamily: 'Times', fontSize:12}}>by the Product <sup>co. </sup>
+            <span style={{fontSize:9}}>EST 2o15.</span>
+            </span> <br/>
             </div>
-            <div style={{textAlign:'left', paddingLeft: 50}}>All Rights Reserved 2017.</div>
+            <div style={{textAlign:'left', paddingLeft: 47}}>All Rights Reserved 2017.</div>
             <br/><br/>
          </div>
       )
