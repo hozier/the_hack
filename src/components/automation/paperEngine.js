@@ -1,6 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
+import {deepOrange300} from 'material-ui/styles/colors';
 
 class PaperEngine extends React.Component{
    styles = (() => {
@@ -47,7 +48,7 @@ class PaperEngine extends React.Component{
                      <Avatar
                         icon={svg}
                         backgroundColor={'#455a64'}
-                        color={'#ffffff'}
+                        color={deepOrange300}
                         size={200}
                         />
                   </div>
