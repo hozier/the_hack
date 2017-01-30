@@ -40,6 +40,11 @@ class ProjectsPage extends React.Component{
             cardHeaderTitle:"DataDash by MBDTUI",
             zDepth:1,
             url:'https://github.com/mbdtui/DataDash'
+         },
+         {
+            cardHeaderTitle:"Catchpoint Search for Splunk",
+            zDepth:1,
+            url:`https://splunkbase.splunk.com/app/3223/`
          }
       ]
       return array
@@ -54,7 +59,7 @@ class ProjectsPage extends React.Component{
                payload={
                   <div>
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Apps & Services</h2>{
-                        this.data.slice(0,0+2 +1).map((row, i) => {
+                        this.data.slice(0,0+2 +1).concat(this.data.slice(7)).map((row, i) => {
                               return <PaperEngine key={i} collection={[row]} svg={ <Code/> }></PaperEngine>
                         })}
 
@@ -63,7 +68,7 @@ class ProjectsPage extends React.Component{
                               return <PaperEngine key={i} collection={[row]} svg={ <Academic/> }></PaperEngine>
                         })}
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Projects | Collaborative</h2>{
-                        this.data.slice(5).map((row, i) => {
+                        this.data.slice(5, 5+1 +1).map((row, i) => {
                               return <PaperEngine key={i} collection={[row]} svg={ <Collab/> }></PaperEngine>
                         })}
                   </div>

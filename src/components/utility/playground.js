@@ -10,7 +10,7 @@ class Playground extends React.Component {
       return {
          introbox:{
             fontSize: 20,
-            background:grey200,
+            background:this.props.background?(this.props.background):(grey200),
             margin: 0,
             right: 0,
             bottom: 240,

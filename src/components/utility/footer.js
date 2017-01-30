@@ -1,8 +1,5 @@
 import React from 'react';
-import {Card, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import Avatar from 'material-ui/Avatar';
 import {grey900} from 'material-ui/styles/colors';
-
 
 class Footer extends React.Component{
 
