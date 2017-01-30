@@ -29,32 +29,35 @@ class AppBarIcon extends React.Component{
    render(){
       return(
          <div style={{fontWeight: '100'}}>
-         <AppBar
-         iconElementRight={<OctoCat/>}
-         style={this.styles.appBar}
-         onLeftIconButtonTouchTap={this.handleToggle}
-         zDepth={0}
-         />
+            <AppBar
+            iconElementRight={<OctoCat/>}
+            style={this.styles.appBar}
+            onLeftIconButtonTouchTap={this.handleToggle}
+            zDepth={0}
+            />
 
 
-         <Drawer open={this.state.open}>
-         <Link to={"/"} style={{ textDecoration: 'none' }} >
-            <Subheader style={
-               {cursor: 'pointer', paddingTop: 16, color:grey800,
-               background:lime500, }}
-               onTouchTap={this.handleToggle} >/ the_hack >
-            </Subheader>
-         </Link>
+            <Drawer open={this.state.open}>
+               <Link to={"/"} style={{ textDecoration: 'none' }} >
+                  <Subheader style={
+                     {cursor: 'pointer', paddingTop: 16, color:grey800,
+                     background:lime500, }}
+                     onTouchTap={this.handleToggle} >/ the_hack >
+                  </Subheader>
+               </Link>
 
-         <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
-            <MenuItem onTouchTap={this.handleToggle}>Monologues</MenuItem>
-         </Link>
+               <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
+                  <MenuItem onTouchTap={this.handleToggle}>Monologues</MenuItem>
+               </Link>
 
-         <Link to={"/projects/"} style={{ textDecoration: 'none' }} >
-            <MenuItem onTouchTap={this.handleToggle}>Projects</MenuItem>
-         </Link>
-         <MenuItem>About</MenuItem>
-         </Drawer>
+               <Link to={"/projects/"} style={{ textDecoration: 'none' }} >
+                  <MenuItem onTouchTap={this.handleToggle}>Projects</MenuItem>
+               </Link>
+
+               <Link to={"/about/"} style={{ textDecoration: 'none' }} >
+                  <MenuItem onTouchTap={this.handleToggle}>About</MenuItem>
+               </Link>
+            </Drawer>
          </div>
       )
    }

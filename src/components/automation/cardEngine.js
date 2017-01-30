@@ -24,8 +24,8 @@ class MonologueEngine extends React.Component{
    monologueEngine = (collection) => {
       var cards = collection.map((row, i) => {
          return (
-            <div>
                <Card key={i}
+                  style={{margin: 20}}
                   zDepth={this.state.zDepth}
                   onMouseEnter={this.handleMouseEnter}
                   onMouseLeave={this.handleMouseLeave}>
@@ -54,10 +54,6 @@ class MonologueEngine extends React.Component{
                      {row.CardText}
                   </CardText>
                </Card>
-
-               <br></br>
-               <br></br>
-            </div>
          )
       })
 

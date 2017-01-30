@@ -9,7 +9,7 @@ class PaperEngine extends React.Component{
          papers:{
             height: 325,
             width: 300,
-            margin: 20,
+            margin: 10,
             textAlign: 'center',
             display: 'inline-block',
             backgroundColor: '#eeeeee'
