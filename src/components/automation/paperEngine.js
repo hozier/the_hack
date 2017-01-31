@@ -45,7 +45,7 @@ class PaperEngine extends React.Component{
       });
    };
 
-   dialogProperties = (()=>{
+   dialogProperties = ((dialogTitle)=>{
       const actions = [
          <FlatButton
             style={{color:grey900}}
@@ -56,11 +56,11 @@ class PaperEngine extends React.Component{
             />,
       ];
       return {
-         title:"Dialog With Actions",
+         title:dialogTitle,
          actions:actions,
          modal:false,
       }
-   })()
+   })
 
    paperEngine = (collection, svg) => {
       var backgroundColor = this.props.background?(this.props.background):('#455a64')
@@ -91,11 +91,11 @@ class PaperEngine extends React.Component{
                {
                   !row.url &&
                   <Dialog
-                     {...this.dialogProperties}
+                     {...this.dialogProperties(row.dialogTitle)}
                      open={this.state.open}
                      onRequestClose={this.handleClose}
                      >
-                     The actions in this window were passed in as an array of React objects.
+                     {row.dialogBody}
                   </Dialog>
                }
             </span>

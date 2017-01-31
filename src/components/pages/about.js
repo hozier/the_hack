@@ -17,17 +17,27 @@ class ProjectsPage extends React.Component{
          {
             cardHeaderTitle:"Author, Founder",
             zDepth:1,
-            url:undefined
+            url:undefined,
+            dialogTitle:'Hozier, P. William, Author',
+            dialogBody:`the Product co. My attraction to design is what drives my interest of user
+            interfaces, software engineering and the users experience. I am a recent
+            graduate from the School of Computer Science at the University of Massachusetts Amherst.`,
          },
          {
             cardHeaderTitle:"Academia",
             zDepth:2,
-            url:undefined
+            url:undefined,
+            dialogTitle:'University of Massachusetts, Amherst',
+            dialogBody:'',
          },
          {
             cardHeaderTitle:"Mission",
             zDepth:5,
-            url:undefined
+            url:undefined,
+            dialogTitle:'The Product Company, est 2015',
+            dialogBody:`the Product co. is built upon our unwavering belief of curiosity and design,
+            both of which we believe are inextricably bound. Keeping these truths at bay, we will tirelessly seek
+            to explore the avenues of code and algorithms through the elemental principles of design.`,
          },
       ]
       return array
