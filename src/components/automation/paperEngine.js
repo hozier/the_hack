@@ -42,7 +42,7 @@ class PaperEngine extends React.Component{
                      zDepth={this.state.zDepth}
                      onMouseEnter={this.handleMouseEnter}
                      onMouseLeave={this.handleMouseLeave}>
-               <h3 style={{fontSize:18, color:color}}>{row.cardHeaderTitle}</h3>
+               <h3 style={{fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
 
 
                <a href={row.url}>
