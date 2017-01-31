@@ -45,23 +45,26 @@ class PaperEngine extends React.Component{
       });
    };
 
-   paperEngine = (collection, svg) => {
-      var backgroundColor = this.props.background?(this.props.background):('#455a64')
-      var color = this.props.color?(this.props.color):(deepOrange300)
+   dialogProperties = (()=>{
       const actions = [
          <FlatButton
-            label="Cancel"
-            primary={true}
-            onTouchTap={this.handleClose}
-            />,
-         <FlatButton
-            label="Submit"
+            style={{color:grey900}}
+            label="Close"
             primary={true}
             keyboardFocused={true}
             onTouchTap={this.handleClose}
             />,
       ];
+      return {
+         title:"Dialog With Actions",
+         actions:actions,
+         modal:false,
+      }
+   })()
 
+   paperEngine = (collection, svg) => {
+      var backgroundColor = this.props.background?(this.props.background):('#455a64')
+      var color = this.props.color?(this.props.color):(deepOrange300)
       var cards = collection.map((row, i) => {
          return(
             <span>
@@ -72,12 +75,11 @@ class PaperEngine extends React.Component{
                   onMouseLeave={this.handleMouseLeave}>
                   <h3 style={{fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
 
-
                   <a href={row.url}>
                      <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 230, paddingTop: 40}}>
                         <Avatar
                            src={this.props.src && this.props.src}
-                           icon={!this.props.src && svg}
+                           icon={!this.props.src?(svg):(undefined) }
                            backgroundColor={backgroundColor}
                            color={color}
                            size={200}
@@ -89,9 +91,7 @@ class PaperEngine extends React.Component{
                {
                   !row.url &&
                   <Dialog
-                     title="Dialog With Actions"
-                     actions={actions}
-                     modal={false}
+                     {...this.dialogProperties}
                      open={this.state.open}
                      onRequestClose={this.handleClose}
                      >
