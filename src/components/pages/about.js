@@ -5,6 +5,7 @@ import Academic from 'material-ui/svg-icons/action/description';
 import Collab from 'material-ui/svg-icons/action/dashboard';
 import Code from 'material-ui/svg-icons/action/code';
 import PaperEngine from "../automation/paperEngine"
+import UMassAmherst from "../img/UMassAmherst_seal_black.svg"
 import {redA200, deepOrange300, grey900} from 'material-ui/styles/colors';
 
 
@@ -28,26 +29,6 @@ class ProjectsPage extends React.Component{
             zDepth:5,
             url:`${base}RESTful_API`
          },
-         {
-            cardHeaderTitle:"Longest Repeated String",
-            zDepth:3,
-            url:`${base}Longest_repeated_substring`
-         },
-         {
-            cardHeaderTitle:"Operating Systems in C",
-            zDepth:4,
-            url:`${base}labs.cmpsci377`
-         },
-         {
-            cardHeaderTitle:"DataDash by MBDTUI",
-            zDepth:1,
-            url:'https://github.com/mbdtui/DataDash'
-         },
-         {
-            cardHeaderTitle:"Catchpoint Search for Splunk",
-            zDepth:1,
-            url:`https://splunkbase.splunk.com/app/3223/`
-         }
       ]
       return array
    }
@@ -59,7 +40,7 @@ class ProjectsPage extends React.Component{
          background:bg,
          headerBackground:bg,
          key:i,
-         collection:[row]
+         collection:[row],
       }
    })
 
@@ -82,15 +63,15 @@ class ProjectsPage extends React.Component{
                      </h2>
                      {
                      this.data.slice(0,1).map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, deepOrange300, '#455a64')}  svg={ <Code/> }></PaperEngine>
+                           return <PaperEngine {...this.stylePaper(row, i, deepOrange300, '#455a64')} src={ 'http://www.scottishprovidentbuilding.co.uk/images/quill.svg?crc=166794421' }></PaperEngine>
                      })}
                      {
                         this.data.slice(1,2).map((row, i) => {
-                              return <PaperEngine {...this.stylePaper(row, i, '#455a64')}  svg={ <Code/> }></PaperEngine>
+                              return <PaperEngine {...this.stylePaper(row, i, '#455a64')}  src={UMassAmherst }></PaperEngine>
                      })}
                      {
                      this.data.slice(2,3).map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, grey900, '#ffffff')}  svg={ <Code/> }></PaperEngine>
+                           return <PaperEngine {...this.stylePaper(row, i, grey900, '#ffffff')}  src={ 'https://www.thinkava.com/assets/images/map.svg' }></PaperEngine>
                      })}
 
                   </div>

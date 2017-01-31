@@ -12,7 +12,7 @@ class PaperEngine extends React.Component{
             margin: this.props.margin?(this.props.margin):(10),
             textAlign: 'center',
             display: 'inline-block',
-            backgroundColor: this.props.headerBackground?(this.props.headerBackground):('#eeeeee')
+            backgroundColor: this.props.headerBackground?(this.props.headerBackground):('#eeeeee'),
          }
       };
    })()
@@ -48,7 +48,8 @@ class PaperEngine extends React.Component{
                <a href={row.url}>
                   <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 230, paddingTop: 40}}>
                      <Avatar
-                        icon={svg}
+                        src={this.props.src && this.props.src}
+                        icon={!this.props.src && svg}
                         backgroundColor={backgroundColor}
                         color={color}
                         size={200}
