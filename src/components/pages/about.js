@@ -63,11 +63,11 @@ class ProjectsPage extends React.Component{
                      </h2>
                      {
                      this.data.slice(0,1).map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, deepOrange300, '#455a64')} src={ 'http://www.scottishprovidentbuilding.co.uk/images/quill.svg?crc=166794421' }></PaperEngine>
+                           return <PaperEngine {...this.stylePaper(row, i, grey900, '#ffffff')} src={ 'http://www.scottishprovidentbuilding.co.uk/images/quill.svg?crc=166794421' }></PaperEngine>
                      })}
                      {
                         this.data.slice(1,2).map((row, i) => {
-                              return <PaperEngine {...this.stylePaper(row, i, '#455a64')}  src={UMassAmherst }></PaperEngine>
+                              return <PaperEngine {...this.stylePaper(row, i, '#455a64', '#ffffff')}  src={UMassAmherst }></PaperEngine>
                      })}
                      {
                      this.data.slice(2,3).map((row, i) => {
