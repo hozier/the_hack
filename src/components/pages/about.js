@@ -14,17 +14,17 @@ class ProjectsPage extends React.Component{
       const base = 'https://github.com/hozier/'
       const array = [
          {
-            cardHeaderTitle:"Play",
+            cardHeaderTitle:"Author, Founder",
             zDepth:1,
             url:`${base}play`
          },
          {
-            cardHeaderTitle:"The Hack",
+            cardHeaderTitle:"Academia",
             zDepth:2,
             url:`${base}the_hack`
          },
          {
-            cardHeaderTitle:"RESTful APIs",
+            cardHeaderTitle:"Mission",
             zDepth:5,
             url:`${base}RESTful_API`
          },
@@ -71,9 +71,15 @@ class ProjectsPage extends React.Component{
             <Playground
                payload={
                   <div>
-                     <h2 style={{color: grey900, fontWeight: '100', lineHeight: '30px' }}>About <hr/> <span style={{fontFamily: 'Times', fontSize:20}}> the Product <sup>co. </sup>
-                  <span style={{fontSize:25}}>EST 2o15.</span>
-                  </span> <br/></h2>
+                     <h2 style={{color: grey900, fontWeight: '100', lineHeight: '25px' }}>
+                        / the_hack >
+                        <span style={{fontFamily: 'Times', fontSize:16}}>
+                           <hr/>
+                           the Product <sup>co. </sup>
+                           <span style={{fontSize:12}}>EST 2o15.</span>
+                        </span>
+                        <br/>
+                     </h2>
                      {
                      this.data.slice(0,1).map((row, i) => {
                            return <PaperEngine {...this.stylePaper(row, i, deepOrange300, '#455a64')}  svg={ <Code/> }></PaperEngine>
@@ -83,8 +89,8 @@ class ProjectsPage extends React.Component{
                               return <PaperEngine {...this.stylePaper(row, i, '#455a64')}  svg={ <Code/> }></PaperEngine>
                      })}
                      {
-                     this.data.slice(0,1).map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, deepOrange300, '#455a64')}  svg={ <Code/> }></PaperEngine>
+                     this.data.slice(2,3).map((row, i) => {
+                           return <PaperEngine {...this.stylePaper(row, i, grey900, '#ffffff')}  svg={ <Code/> }></PaperEngine>
                      })}
 
                   </div>
