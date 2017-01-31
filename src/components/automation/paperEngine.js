@@ -2,6 +2,9 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import {deepOrange300, grey900} from 'material-ui/styles/colors';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class PaperEngine extends React.Component{
    styles = (() => {
@@ -17,46 +20,85 @@ class PaperEngine extends React.Component{
       };
    })()
 
+   handleOpen = () => {
+      this.setState({open: true});
+   };
+
+   handleClose = () => {
+      this.setState({open: false});
+   };
+
    state = {
-       zDepth: 1,
+      zDepth: 1,
+      open: false,
    };
 
    handleMouseEnter = () => {
-     this.setState({
-       zDepth: 5,
-     });
+      this.setState({
+         zDepth: 5,
+      });
    };
 
    handleMouseLeave = () => {
-     this.setState({
-       zDepth: 1,
-     });
+      this.setState({
+         zDepth: 1,
+      });
    };
 
    paperEngine = (collection, svg) => {
       var backgroundColor = this.props.background?(this.props.background):('#455a64')
       var color = this.props.color?(this.props.color):(deepOrange300)
+      const actions = [
+         <FlatButton
+            label="Cancel"
+            primary={true}
+            onTouchTap={this.handleClose}
+            />,
+         <FlatButton
+            label="Submit"
+            primary={true}
+            keyboardFocused={true}
+            onTouchTap={this.handleClose}
+            />,
+      ];
+
       var cards = collection.map((row, i) => {
          return(
-            <Paper key={i} style={this.styles.papers} rounded={false}
-                     zDepth={this.state.zDepth}
-                     onMouseEnter={this.handleMouseEnter}
-                     onMouseLeave={this.handleMouseLeave}>
-               <h3 style={{fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
+            <span>
+               <Paper key={i} style={this.styles.papers} rounded={false}
+                  onTouchTap={this.handleOpen}
+                  zDepth={this.state.zDepth}
+                  onMouseEnter={this.handleMouseEnter}
+                  onMouseLeave={this.handleMouseLeave}>
+                  <h3 style={{fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
 
 
-               <a href={row.url}>
-                  <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 230, paddingTop: 40}}>
-                     <Avatar
-                        src={this.props.src && this.props.src}
-                        icon={!this.props.src && svg}
-                        backgroundColor={backgroundColor}
-                        color={color}
-                        size={200}
-                        />
-                  </div>
-               </a>
-            </Paper>
+                  <a href={row.url}>
+                     <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 230, paddingTop: 40}}>
+                        <Avatar
+                           src={this.props.src && this.props.src}
+                           icon={!this.props.src && svg}
+                           backgroundColor={backgroundColor}
+                           color={color}
+                           size={200}
+                           />
+                     </div>
+                  </a>
+               </Paper>
+
+               {
+                  !row.url &&
+                  <Dialog
+                     title="Dialog With Actions"
+                     actions={actions}
+                     modal={false}
+                     open={this.state.open}
+                     onRequestClose={this.handleClose}
+                     >
+                     The actions in this window were passed in as an array of React objects.
+                  </Dialog>
+               }
+            </span>
          )
       })
 

@@ -17,17 +17,17 @@ class ProjectsPage extends React.Component{
          {
             cardHeaderTitle:"Author, Founder",
             zDepth:1,
-            url:`${base}play`
+            url:undefined
          },
          {
             cardHeaderTitle:"Academia",
             zDepth:2,
-            url:`${base}the_hack`
+            url:undefined
          },
          {
             cardHeaderTitle:"Mission",
             zDepth:5,
-            url:`${base}RESTful_API`
+            url:undefined
          },
       ]
       return array
