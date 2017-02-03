@@ -1,10 +1,9 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
-import {deepOrange300, grey900} from 'material-ui/styles/colors';
+import {deepOrange300, grey900 } from 'material-ui/styles/colors';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 
 class PaperEngine extends React.Component{
    styles = (() => {
@@ -16,6 +15,10 @@ class PaperEngine extends React.Component{
             textAlign: 'center',
             display: 'inline-block',
             backgroundColor: this.props.headerBackground?(this.props.headerBackground):('#eeeeee'),
+         },
+         depths:{
+            depthStart: this.props.src?(5):(1),
+            depthEnd: !this.props.src?(5):(1),
          }
       };
    })()
@@ -29,19 +32,19 @@ class PaperEngine extends React.Component{
    };
 
    state = {
-      zDepth: 1,
+      zDepth: this.styles.depths.depthStart,
       open: false,
    };
 
    handleMouseEnter = () => {
       this.setState({
-         zDepth: 5,
+         zDepth: this.styles.depths.depthEnd,
       });
    };
 
    handleMouseLeave = () => {
       this.setState({
-         zDepth: 1,
+         zDepth: this.styles.depths.depthStart,
       });
    };
 
