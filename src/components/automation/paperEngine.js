@@ -79,7 +79,7 @@ class PaperEngine extends React.Component{
                   <h3 style={{fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
 
                   <a href={row.url}>
-                     <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 230, paddingTop: 40}}>
+                     <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 221, paddingTop: 40}}>
                         <Avatar
                            src={this.props.src && this.props.src}
                            icon={!this.props.src?(svg):(undefined) }
