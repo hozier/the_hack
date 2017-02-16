@@ -5,6 +5,7 @@ import Build from 'material-ui/svg-icons/device/widgets';
 import Code from 'material-ui/svg-icons/maps/layers';
 import {redA200, grey600} from 'material-ui/styles/colors';
 import CardEngine from "../automation/cardEngine"
+import Facebook from "../img/facebook.png"
 
 class EventsPage extends React.Component{
 
@@ -18,7 +19,7 @@ class EventsPage extends React.Component{
             cardBodySubtitle:"UMass Bike Coop",
             backgroundColor:"#ffffff",
             svgColor:powderedBlue,
-            imgSrc:<img src='http://findicons.com/files/icons/1678/handy_social_media_icons/256/facebook.png'/>,
+            imgSrc:<img src={Facebook}/>,
          CardText:'For our most up-to-date events, follow UMass Bike Coop on Facebook. Thanks!'
          }
       ]
@@ -34,9 +35,11 @@ class EventsPage extends React.Component{
                payload={
                   <div>
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Events</h2>
-                     {this.data.map((row, i) => {
-                           return <CardEngine key={i} collection={[row]}></CardEngine>
-                     })}
+                     <a href='https://www.facebook.com/Umass.Bike.Coop/' style={{ textDecoration: 'none' }}>
+                        {this.data.map((row, i) => {
+                              return <CardEngine key={i} collection={[row]}></CardEngine>
+                        })}
+                     </a>
                   </div>
                }
                maxWidth={900}

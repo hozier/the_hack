@@ -2,7 +2,7 @@
 # / the_hack >
 
 ###### (a) In Development
-Implementation of an SPA (single-page application) engineering blog built with ReactJS, NodeJS and the principles of Material Design.
+Implementation of an SPA (single-page application) built for a bicycle cooperative at the University of Massachusetts Amherst and designed with ReactJS, NodeJS and the principles of Material Design.
 
 
 ###### (b.1) API
