@@ -91,7 +91,7 @@ class PaperEngine extends React.Component{
                </Paper>
 
                {
-                  !row.url &&
+                  !row.price &&
                   <Dialog
                      {...this.dialogProperties(row.dialogTitle)}
                      open={this.state.open}

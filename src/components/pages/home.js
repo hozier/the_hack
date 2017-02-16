@@ -27,6 +27,14 @@ class Homepage extends React.Component {
    };
 })()
 
+datastore = (() => {
+   return [
+      { link:'prices', icon:<Payment/>, bg:'#00796B', fg:amber400, snackMsg:'Prices' },
+      { link:'events', icon:<Event/>, bg:pink300, fg:'#00796B', snackMsg:'Events' },
+      { link:'about', icon:<MastHead/>, bg:undefined, fg:'#00796B', snackMsg:'About' }
+   ]
+})()
+
 circleProps = (a, b, f, s) => {
    return {
       avatarIcon:a,
@@ -59,17 +67,15 @@ render(){
 
          <Playground payload={
                <div style={{textAlign: 'center'}}>
-                  <Link to={"/prices/"} style={{ textDecoration: 'none' }} >
-                     <CircleEngine {...this.circleProps(<Payment/>, '#00796B', amber400, 'Prices')} />
-                  </Link>
-
-                  <Link to={"/events/"} style={{ textDecoration: 'none' }} >
-                     <CircleEngine {...this.circleProps(<Event/>, pink300, '#00796B', 'Events')} />
-                  </Link>
-
-                  <Link to={"/about/"} style={{ textDecoration: 'none' }} >
-                     <CircleEngine {...this.circleProps(<MastHead/>, undefined, '#00796B', 'About')} />
-                  </Link>
+                  {
+                     this.datastore.map((row, i) =>{
+                        return(
+                           <Link key={i} to={`/${row.link}/`} style={{ textDecoration: 'none' }} >
+                              <CircleEngine {...this.circleProps(row.icon, row.bg, row.fg, row.snackMsg)} />
+                           </Link>
+                        )
+                     })
+                  }
                </div>
             }
 

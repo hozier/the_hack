@@ -15,41 +15,13 @@ class PricesPage extends React.Component{
    datastore = () => {
       const base = '$10.00'
       const array = [
-         {
-            cardHeaderTitle:"Tire",
-            zDepth:1,
-            price:`${base}`
-         },
-         {
-            cardHeaderTitle:"Tube",
-            zDepth:2,
-            price:`${base}`
-         },
-         {
-            cardHeaderTitle:"Chain",
-            zDepth:5,
-            price:`${base}`
-         },
-         {
-            cardHeaderTitle:"Flat Fix",
-            zDepth:3,
-            price:`${base}`
-         },
-         {
-            cardHeaderTitle:"Tune-Up",
-            zDepth:4,
-            price:`${base}`
-         },
-         {
-            cardHeaderTitle:"Helmet",
-            zDepth:1,
-            price:`${base}`
-         },
-         {
-            cardHeaderTitle:"Bar Tape",
-            zDepth:1,
-            price:`${base}`
-         }
+         { cardHeaderTitle:"Tire", price:`${base}` },
+         { cardHeaderTitle:"Tube", price:`${base}` },
+         { cardHeaderTitle:"Chain", price:`${base}` },
+         { cardHeaderTitle:"Flat Fix", price:`${base}` },
+         { cardHeaderTitle:"Tune-Up", price:`${base}` },
+         { cardHeaderTitle:"Helmet", price:`${base}` },
+         { cardHeaderTitle:"Bar Tape", price:`${base}` }
       ]
       return array
    }

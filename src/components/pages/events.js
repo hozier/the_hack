@@ -19,7 +19,7 @@ class EventsPage extends React.Component{
             backgroundColor:"#ffffff",
             svgColor:powderedBlue,
             imgSrc:<img src='http://findicons.com/files/icons/1678/handy_social_media_icons/256/facebook.png'/>,
-         CardText:'For our most up-to-date events, follows UMass Bike Coop on Facebook. Thanks!'
+         CardText:'For our most up-to-date events, follow UMass Bike Coop on Facebook. Thanks!'
          }
       ]
       return array
