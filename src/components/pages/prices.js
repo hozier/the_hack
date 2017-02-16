@@ -9,7 +9,6 @@ import Items from 'material-ui/svg-icons/image/style';
 import Labor from 'material-ui/svg-icons/action/build';
 import Misc from 'material-ui/svg-icons/action/settings';
 
-
 class PricesPage extends React.Component{
 
    datastore = () => {

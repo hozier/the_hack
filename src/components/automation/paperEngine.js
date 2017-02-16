@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
-import {deepOrange300, grey900 } from 'material-ui/styles/colors';
+import {deepOrange300, grey900, pink300, teal700, amber400} from 'material-ui/styles/colors';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -9,12 +9,12 @@ class PaperEngine extends React.Component{
    styles = (() => {
       return {
          papers:{
-            height: 325,
-            width: 300,
+            height: 259,
+            width: 225,
             margin: this.props.margin?(this.props.margin):(10),
             textAlign: 'center',
             display: 'inline-block',
-            backgroundColor: this.props.headerBackground?(this.props.headerBackground):('#eeeeee'),
+            backgroundColor: this.props.headerBackground?(this.props.headerBackground):(pink300),
          },
          depths:{
             depthStart: this.props.src?(5):(1),
@@ -66,8 +66,8 @@ class PaperEngine extends React.Component{
    })
 
    paperEngine = (collection, svg) => {
-      var backgroundColor = this.props.background?(this.props.background):('#455a64')
-      var color = this.props.color?(this.props.color):(deepOrange300)
+      var backgroundColor = this.props.background?(this.props.background):(teal700)
+      var color = this.props.color?(this.props.color):(amber400)
       var cards = collection.map((row, i) => {
          return(
             <span>
@@ -76,17 +76,18 @@ class PaperEngine extends React.Component{
                   zDepth={this.state.zDepth}
                   onMouseEnter={this.handleMouseEnter}
                   onMouseLeave={this.handleMouseLeave}>
-                  <h3 style={{fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
+                  <h3 style={{fontSize:18, color:this.props.background?(color):('#ffffff')}}>{row.cardHeaderTitle}</h3>
 
-                  <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 221, paddingTop: 40}}>
+                  <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 155, paddingTop: 40}}>
                      <Avatar
+                        style={{marginTop:-55}}
                         src={this.props.src && this.props.src}
                         icon={!this.props.src?(svg):(undefined) }
                         backgroundColor={backgroundColor}
                         color={color}
                         size={200}
                         />
-                     <span style={{fontFamily: 'Georgia', fontSize:16, color:'#ffffff'}}>{row.price}</span>
+                     <br/><div style={{marginTop:-40, fontFamily: 'Georgia', fontSize:16, color:'#ffffff'}}>{row.price}</div>
                   </div>
                </Paper>
 
