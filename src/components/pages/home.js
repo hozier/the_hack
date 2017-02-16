@@ -9,6 +9,8 @@ import Playground from "../utility/playground"
 import {Link} from 'react-router';
 import Event from 'material-ui/svg-icons/notification/event-available';
 import Payment from 'material-ui/svg-icons/maps/local-grocery-store';
+import CircleEngine from "../automation/circleEngine"
+
 
 class Homepage extends React.Component {
    // overview: defines styles used locally only for this component
@@ -27,94 +29,86 @@ class Homepage extends React.Component {
          style={{color:pink300}}>the user's experience</span>. I am a recent graduate
          from the School of Computer Science at the University of Massachusetts
          Amherst and an IBM Software Engineer.</span>
-      };
-   })()
+   };
+})()
 
-   constructor(props){
-      super(props)
-      this.state = {
-         tags: ['design', 'solutions', 'code', 'curiosity',
-         'imagination', 'discovery', 'algorithms']
-      }
+constructor(props){
+   super(props)
+   this.state = {
+      tags: ['design', 'solutions', 'code', 'curiosity',
+      'imagination', 'discovery', 'algorithms'],
    }
+}
 
-   cycleTags = () => {
-      var temp = this.state.tags
-      let el = temp.pop()
-      let index = 0
-      temp.splice(index, 0, el)
-      this.setState({
-         tags: temp
-      });
+cycleTags = () => {
+   var temp = this.state.tags
+   let el = temp.pop()
+   let index = 0
+   temp.splice(index, 0, el)
+   this.setState({
+      tags: temp
+   });
+}
+
+tick() {
+   this.cycleTags()
+}
+
+componentDidMount() {
+   this.timerID = setInterval(
+      () => this.tick(),
+      400
+   );
+}
+
+componentWillUnmount() {
+   clearInterval(this.timerID);
+}
+
+circleProps = (a, b, f, s) => {
+   return {
+      avatarIcon:a,
+      backgroundColor:b,
+      foregroundColor:f,
+      snackBarMessage:s
    }
+}
 
-   tick() {
-      this.cycleTags()
-   }
+render(){
 
-   componentDidMount() {
-      this.timerID = setInterval(
-         () => this.tick(),
-         400
-      );
-   }
+   return(
+      <div>
+         <div style={this.styles.mastheadBox}>
+            <Avatar
+               icon={ <MastHead/> }
+               backgroundColor={amber400}
+               color={'#00796B'}
+               size={300}
+               />
+            <h1>  Bike Coop </h1>
+            <p>@UMassAmherst</p>
+            <p style={{letterSpacing: 4}}><b>#{this.state.tags[0]}</b></p><br/>
+            <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
+               <RaisedButton label="Explore"
+                  style={{marginBottom:40}}/>
+            </Link>
 
-   componentWillUnmount() {
-      clearInterval(this.timerID);
-   }
-
-   render(){
-      return(
-         <div>
-            <div style={this.styles.mastheadBox}>
-               <Avatar
-                  icon={ <MastHead/> }
-                  backgroundColor={amber400}
-                  color={'#00796B'}
-                  size={300}
-                  />
-               <h1>  Bike Coop </h1>
-               <p>@UMassAmherst</p>
-               <p style={{letterSpacing: 4}}><b>#{this.state.tags[0]}</b></p><br/>
-               <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
-                  <RaisedButton label="Explore"
-                     style={{marginBottom:40}}/>
-               </Link>
-
-            </div>
-
-
-            <Playground payload={
-                  <div style={{textAlign: 'center'}}>
-                     <Avatar
-                        icon={<Payment/>}
-                        size={100}
-                        backgroundColor={'#00796B'}
-                        color={amber400}
-                        style={{margin: 50, marginBottom:15, marginTop:15}}
-                        />
-                     <Avatar
-                        icon={<Event/>}
-                        size={100}
-                        backgroundColor={pink300}
-                        color={'#00796B'}
-                        style={{margin: 50, marginBottom:15, marginTop:15}}
-                        />
-                     <Avatar
-                        icon={<MastHead/>}
-                        size={100}
-                        color={'#00796B'}
-                        style={{margin: 50, marginBottom:15, marginTop:15}}
-                        />
-
-                  </div>
-               }
-
-               maxWidth={700}
-            />
          </div>
-      )
-   }
+
+
+         <Playground payload={
+               <div style={{textAlign: 'center'}}>
+                  <CircleEngine {...this.circleProps(<Payment/>, '#00796B', amber400, 'Prices')} />
+                  <CircleEngine {...this.circleProps(<Event/>, pink300, '#00796B', 'Events')} />
+                  <CircleEngine {...this.circleProps(<MastHead/>, undefined, '#00796B', 'About')} />
+               </div>
+            }
+
+            maxWidth={700}
+            />
+      </div>
+   )
+}
 }
 
 export default withWidth()(Homepage);
