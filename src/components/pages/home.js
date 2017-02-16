@@ -4,7 +4,6 @@ import {amber400, pink300} from 'material-ui/styles/colors';
 import MastHead from 'material-ui/svg-icons/maps/directions-bike';
 import RaisedButton from 'material-ui/RaisedButton';
 import withWidth from 'material-ui/utils/withWidth';
-import Hozier from "../img/csseuxui-128.jpg"
 import Playground from "../utility/playground"
 import {Link} from 'react-router';
 import Event from 'material-ui/svg-icons/notification/event-available';

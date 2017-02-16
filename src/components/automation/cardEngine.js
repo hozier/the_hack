@@ -1,7 +1,8 @@
 import React from 'react';
 import {Card, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
-import Hozier from "../img/csseuxui-128.jpg"
+import BikeCoop from "../img/bikeCoop.jpg"
+
 
 class MonologueEngine extends React.Component{
 
@@ -33,7 +34,7 @@ class MonologueEngine extends React.Component{
                      <CardHeader
                         title={row.cardHeaderTitle}
                         subtitle={row.cardHeaderSubtitle}
-                        avatar={Hozier}
+                        avatar={BikeCoop}
                         />}
 
                   {row.imgSrc && <CardMedia

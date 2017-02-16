@@ -13,8 +13,8 @@ class EventsPage extends React.Component{
       const powderedBlue = '#eff3ff'
       const array = [
          {
-            cardHeaderTitle:"P. William Hozier",
-            cardHeaderSubtitle:"Janurary 22, 2017",
+            cardHeaderTitle:"Dirk Diggler",
+            cardHeaderSubtitle:"Spring 2017",
             cardBodyTitle:"Friend Us On Facebook!",
             cardBodySubtitle:"UMass Bike Coop",
             backgroundColor:"#ffffff",
