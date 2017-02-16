@@ -13,42 +13,42 @@ import Misc from 'material-ui/svg-icons/action/settings';
 class PricesPage extends React.Component{
 
    datastore = () => {
-      const base = 'https://github.com/hozier/'
+      const base = '$10.00'
       const array = [
          {
-            cardHeaderTitle:"Play",
+            cardHeaderTitle:"Tire",
             zDepth:1,
-            url:`${base}play`
+            price:`${base}`
          },
          {
-            cardHeaderTitle:"The Hack",
+            cardHeaderTitle:"Tube",
             zDepth:2,
-            url:`${base}the_hack`
+            price:`${base}`
          },
          {
-            cardHeaderTitle:"RESTful APIs",
+            cardHeaderTitle:"Chain",
             zDepth:5,
-            url:`${base}RESTful_API`
+            price:`${base}`
          },
          {
-            cardHeaderTitle:"Longest Repeated String",
+            cardHeaderTitle:"Flat Fix",
             zDepth:3,
-            url:`${base}Longest_repeated_substring`
+            price:`${base}`
          },
          {
-            cardHeaderTitle:"Operating Systems in C",
+            cardHeaderTitle:"Tune-Up",
             zDepth:4,
-            url:`${base}labs.cmpsci377`
+            price:`${base}`
          },
          {
-            cardHeaderTitle:"DataDash by MBDTUI",
+            cardHeaderTitle:"Helmet",
             zDepth:1,
-            url:'https://github.com/mbdtui/DataDash'
+            price:`${base}`
          },
          {
-            cardHeaderTitle:"Catchpoint Search for Splunk",
+            cardHeaderTitle:"Bar Tape",
             zDepth:1,
-            url:`https://splunkbase.splunk.com/app/3223/`
+            price:`${base}`
          }
       ]
       return array
