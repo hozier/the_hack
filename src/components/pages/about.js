@@ -12,25 +12,36 @@ class PricesPage extends React.Component{
    datastore = () => {
       const array = [
          {
-            cardHeaderTitle:"UMass Bike Coop",
-            zDepth:1,
-            url:undefined,
-            dialogTitle:`Author's Note`,
-            dialogBody:`Curiosity is love. It's ignorance's nemesis. We should all be so lucky to have a playground for our imaginations” (Farrell, 2009).
-            Questioning the flow, bits and pieces of data that collectively become the intricacies and vulnerabilities within computing
-            is the ultimate springboard to smarter solutions. My transition from a love of literature and writing into writing lines of code seems almost intrinsic
-            to some as a convergence of curiosity. As an author, I’ve encouraged curiousness in the face of uncertainty — believing it is fundamental
-            to the writing process. Integral to the development of original solutions and design, curiosity is core to the Product co. — serving as a space
-            where creativity and curiosity thrive. — Hozier, P. William `
-         },
-         {
-            cardHeaderTitle:"Mission",
+            cardHeaderTitle:<p>UMass Bike Coop<sup></sup></p>,
             zDepth:5,
             url:undefined,
-            dialogTitle:'The Product Company, est. 2015',
-            dialogBody:`the Product co. is built upon our unwavering belief of curiosity and design,
+            dialogTitle:
+            <div>Who We Are
+               <p style={{fontSize:12, marginTop:-15, marginBottom:-10}}>
+                  UMass Bike <sup>coop.</sup> est. 1970's.<br/>
+               </p>
+            </div>,
+            dialogBody:
+            <p style={{marginTop:0}}>
+            Curiosity is love. It's ignorance's nemesis. We should all be so lucky to have a playground for our imaginations. — Farrell, C.
+            </p>,
+         },
+         {
+            cardHeaderTitle:<p>the Product <sup>co.</sup></p>,
+            zDepth:5,
+            url:undefined,
+            dialogTitle:
+            <div>Developer's Note
+               <p style={{fontSize:12, marginTop:-15, marginBottom:-10}}>
+                  the Product <sup>co.</sup> est. 2015.<br/>
+               </p>
+            </div>,
+            dialogBody:
+            <p style={{marginTop:0}}>
+            the Product co. is built upon our unwavering belief of curiosity and design,
             both of which we believe are inextricably bound. Keeping these truths at bay, we will tirelessly seek
-            to explore the avenues of code and algorithms through the elemental principles of design.`,
+            to explore the avenues of code and algorithms through the elemental principles of design.
+            </p>,
          },
       ]
       return array
