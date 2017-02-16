@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
-import {deepOrange300, grey900, pink300, teal700, amber400} from 'material-ui/styles/colors';
+import {deepOrange300, grey900, pink100, teal700, amber400} from 'material-ui/styles/colors';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -9,12 +9,13 @@ class PaperEngine extends React.Component{
    styles = (() => {
       return {
          papers:{
-            height: 259,
-            width: 225,
+            height: this.props.H?(this.props.H):(259),
+            width: this.props.W?(this.props.W):(225),
             margin: this.props.margin?(this.props.margin):(10),
             textAlign: 'center',
             display: 'inline-block',
-            backgroundColor: this.props.headerBackground?(this.props.headerBackground):(pink300),
+            backgroundColor: this.props.headerBackground?(this.props.headerBackground):(pink100),
+            fontFamily: 'Georgia'
          },
          depths:{
             depthStart: this.props.src?(5):(1),
@@ -76,7 +77,7 @@ class PaperEngine extends React.Component{
                   zDepth={this.state.zDepth}
                   onMouseEnter={this.handleMouseEnter}
                   onMouseLeave={this.handleMouseLeave}>
-                  <h3 style={{fontSize:18, color:this.props.background?(color):('#ffffff')}}>{row.cardHeaderTitle}</h3>
+                  <h3 style={{fontWeight: 'normal', fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
 
                   <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: 155, paddingTop: 40}}>
                      <Avatar
@@ -87,7 +88,7 @@ class PaperEngine extends React.Component{
                         color={color}
                         size={200}
                         />
-                     <br/><div style={{marginTop:-40, fontFamily: 'Georgia', fontSize:16, color:'#ffffff'}}>{row.price}</div>
+                     <br/><div style={{marginTop:-40, fontSize:16, color:'#ffffff'}}>{row.price}</div>
                   </div>
                </Paper>
 

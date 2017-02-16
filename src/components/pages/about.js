@@ -16,7 +16,7 @@ class PricesPage extends React.Component{
             zDepth:5,
             url:undefined,
             dialogTitle:
-            <div>Who We Are
+            <div style={{fontFamily: 'Georgia'}}>Who We Are
                <p style={{fontSize:12, marginTop:-15, marginBottom:-10}}>
                   UMass Bike <sup>coop.</sup> est. 1970's.<br/>
                </p>
@@ -31,14 +31,14 @@ class PricesPage extends React.Component{
             zDepth:5,
             url:undefined,
             dialogTitle:
-            <div>Developer's Note
-               <p style={{fontSize:12, marginTop:-15, marginBottom:-10}}>
+            <div style={{fontFamily: 'Georgia'}}>Developer's Note
+               <p style={{fontSize:12, fontFamily: 'Georgia', marginTop:-15, marginBottom:-10}}>
                   the Product <sup>co.</sup> est. 2015.<br/>
                </p>
             </div>,
             dialogBody:
             <p style={{marginTop:0}}>
-            the Product co. is built upon our unwavering belief of curiosity and design,
+            the Product <sup>co.</sup> is built upon our unwavering belief of curiosity and design,
             both of which we believe are inextricably bound. Keeping these truths at bay, we will tirelessly seek
             to explore the avenues of code and algorithms through the elemental principles of design.
             </p>,
@@ -55,6 +55,8 @@ class PricesPage extends React.Component{
          headerBackground:bg,
          key:i,
          collection:[row],
+         H:325,
+         W:300,
       }
    })
 
