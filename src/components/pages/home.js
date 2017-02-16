@@ -23,47 +23,9 @@ class Homepage extends React.Component {
             left: 'auto',
             textAlign: 'center',
          },
-         introBlurb:<span>My attraction to design is what drives my interest of <span
-         style={{color:pink300}}>user interfaces</span>, <span
-         style={{color:pink300}}>software engineering</span> and <span
-         style={{color:pink300}}>the user's experience</span>. I am a recent graduate
-         from the School of Computer Science at the University of Massachusetts
-         Amherst and an IBM Software Engineer.</span>
+         introBlurb:<span></span>
    };
 })()
-
-constructor(props){
-   super(props)
-   this.state = {
-      tags: ['design', 'solutions', 'code', 'curiosity',
-      'imagination', 'discovery', 'algorithms'],
-   }
-}
-
-cycleTags = () => {
-   var temp = this.state.tags
-   let el = temp.pop()
-   let index = 0
-   temp.splice(index, 0, el)
-   this.setState({
-      tags: temp
-   });
-}
-
-tick() {
-   this.cycleTags()
-}
-
-componentDidMount() {
-   this.timerID = setInterval(
-      () => this.tick(),
-      400
-   );
-}
-
-componentWillUnmount() {
-   clearInterval(this.timerID);
-}
 
 circleProps = (a, b, f, s) => {
    return {
@@ -85,9 +47,8 @@ render(){
                color={'#00796B'}
                size={300}
                />
-            <h1>  Bike Coop </h1>
-            <p>@UMassAmherst</p>
-            <p style={{letterSpacing: 4}}><b>#{this.state.tags[0]}</b></p><br/>
+            <h1 style={{marginTop: -50}}>  Bike Coop </h1>
+            <p style={{letterSpacing: 6, marginTop: -20}}><b>@UMassAmherst</b> </p>
             <Link to={"/prices/"} style={{ textDecoration: 'none' }} >
                <RaisedButton label="Explore"
                   style={{marginBottom:40}}/>
