@@ -17,32 +17,31 @@ class PaperEngine extends React.Component{
             textAlign: 'center',
             display: 'inline-block',
          },
-         depths:{
-            depthStart: this.props.src?(5):(1),
-            depthEnd: !this.props.src?(5):(1),
-         }
       };
    })()
 
    state = {
       open: false,
+      depth: 5
    };
 
    handleMouseEnter = () => {
       this.setState({
          open: true,
+         depth: 2
       });
    };
 
    handleMouseLeave = () => {
       this.setState({
          open: false,
+         depth: 5
       });
    };
 
    circleEngine = (avatarIcon, backgroundColor, foregroundColor, snackBarMessage) => {
       return(
-         <Paper style={this.styles.circles} zDepth={5} circle={true}
+         <Paper style={this.styles.circles} zDepth={this.state.depth} circle={true}
             onMouseEnter={this.handleMouseEnter}
             onMouseLeave={this.handleMouseLeave}
             >
@@ -55,7 +54,6 @@ class PaperEngine extends React.Component{
             <Snackbar
                open={this.state.open}
                message={snackBarMessage}
-               autoHideDuration={1000}
                />
          </Paper>
       )

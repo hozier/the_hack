@@ -14,52 +14,12 @@ class MonologuesPage extends React.Component{
          {
             cardHeaderTitle:"P. William Hozier",
             cardHeaderSubtitle:"Janurary 22, 2017",
-            cardBodyTitle:"Component-Driven Development",
-            cardBodySubtitle:"Thinking in ReactJS with NodeJS + Material Design",
-            backgroundColor:powderedBlue,
-            svgColor:redA200,
-            imgSrc:<Build/>,
-         CardText:`Borrowing from the Unix philosophy - Facebook's ReactJS is an evolution - The web was originally built with methodologies which kept at  endeavored to build for the web has  from a tier-driven developing for the web as `
-         },
-         {
-            cardHeaderTitle:"P. William Hozier",
-            cardHeaderSubtitle:"Janurary 22, 2017",
-            cardBodyTitle:"Thinking in C",
-            cardBodySubtitle:"From Data Structures to Algorithms",
-            backgroundColor: powderedBlue,
-            svgColor:grey600,
-            imgSrc:<div style={{paddingTop: 110, fontFamily:'Times'}}>C</div>,
-            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-         },
-         {
-            cardHeaderTitle:"P. William Hozier",
-            cardHeaderSubtitle:"Janurary 22, 2017",
-            cardBodyTitle:"Thinking in C",
-            cardBodySubtitle:"Smarter Linked Lists",
-            backgroundColor: powderedBlue,
-            svgColor:grey600,
-            imgSrc:undefined,
-            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-         },
-         {
-            cardHeaderTitle:"P. William Hozier",
-            cardHeaderSubtitle:"Janurary 22, 2017",
-            cardBodyTitle:"Thinking in C",
-            cardBodySubtitle:"Graphs",
-            backgroundColor: powderedBlue,
-            svgColor:grey600,
-            imgSrc:undefined,
-            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-         },
-         {
-            cardHeaderTitle:"P. William Hozier",
-            cardHeaderSubtitle:"Janurary 22, 2017",
-            cardBodyTitle:"Algorithms",
-            cardBodySubtitle:"A Mathematical Science",
-            backgroundColor:redA200,
+            cardBodyTitle:"Friend Us On Facebook!",
+            cardBodySubtitle:"UMass Bike Coop",
+            backgroundColor:"#ffffff",
             svgColor:powderedBlue,
-            imgSrc:<Code/>,
-            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            imgSrc:<img src='http://findicons.com/files/icons/1678/handy_social_media_icons/256/facebook.png'/>,
+         CardText:'For our most up-to-date events, follows UMass Bike Coop on Facebook. Thanks!'
          }
       ]
       return array
@@ -73,7 +33,7 @@ class MonologuesPage extends React.Component{
             <Playground
                payload={
                   <div>
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>An Engineer's Monologue</h2>
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Events</h2>
                      {this.data.map((row, i) => {
                            return <CardEngine key={i} collection={[row]}></CardEngine>
                      })}
