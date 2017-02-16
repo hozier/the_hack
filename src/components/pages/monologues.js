@@ -19,7 +19,7 @@ class MonologuesPage extends React.Component{
             backgroundColor:powderedBlue,
             svgColor:redA200,
             imgSrc:<Build/>,
-            CardText:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+         CardText:`Borrowing from the Unix philosophy - Facebook's ReactJS is an evolution - The web was originally built with methodologies which kept at  endeavored to build for the web has  from a tier-driven developing for the web as `
          },
          {
             cardHeaderTitle:"P. William Hozier",

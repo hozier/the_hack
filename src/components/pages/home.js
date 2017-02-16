@@ -12,13 +12,19 @@ class Homepage extends React.Component {
    // overview: defines styles used locally only for this component
    styles = (() => {
       return {
-         box:{
+         mastheadBox:{
             background:lime500,
             margin: 0,
             right: 0,
             left: 'auto',
             textAlign: 'center',
-         }
+         },
+         introBlurb:<span>My attraction to design is what drives my interest of <span
+         style={{color:pink300}}>user interfaces</span>, <span
+         style={{color:pink300}}>software engineering</span> and <span
+         style={{color:pink300}}>the user's experience</span>. I am a recent graduate
+         from the School of Computer Science at the University of Massachusetts
+         Amherst and an IBM Software Engineer.</span>
       };
    })()
 
@@ -58,7 +64,7 @@ class Homepage extends React.Component {
    render(){
       return(
          <div>
-            <div style={this.styles.box}>
+            <div style={this.styles.mastheadBox}>
                <Avatar
                   icon={<Fingerprint />}
                   backgroundColor={lime500}
@@ -83,12 +89,7 @@ class Homepage extends React.Component {
                         size={100}
                         style={{marginRight:20, marginBottom:-5}}
                         />
-                     My attraction to design is what drives my interest of <span
-                     style={{color:pink300}}>user interfaces</span>, <span
-                     style={{color:pink300}}>software engineering</span> and <span
-                     style={{color:pink300}}>the users experience</span>. I am a recent graduate
-                     from the School of Computer Science at the University of Massachusetts
-                     Amherst.
+                     {this.styles.introBlurb}
                   </div>
                }
 
