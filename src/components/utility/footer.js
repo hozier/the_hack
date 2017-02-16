@@ -11,7 +11,7 @@ class Footer extends React.Component{
 
             <div style={{textAlign:'left', paddingLeft: 47, zDepth:5, fontSize:15}}>
                <br></br>
-               / the_hack > <span style={{fontFamily: 'Times', fontSize:12}}>by the Product <sup>co. </sup>
+               Bike Coop <span style={{fontFamily: 'Times', fontSize:12}}>by the Product <sup>co. </sup>
             <span style={{fontSize:9}}>EST 2o15.</span>
             </span> <br/>
             </div>

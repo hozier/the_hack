@@ -2,7 +2,7 @@
 * In this file, we create a React component
 * which incorporates components provided by Material-UI.
 */
-import {deepOrange500, amber500}
+import {deepOrange500, amber400}
 from 'material-ui/styles/colors';
 import React, {Component} from 'react';
 import AppBarIcon from "./utility/appbaricon"
@@ -12,7 +12,7 @@ import Footer from "./utility/footer"
 
 const muiTheme = getMuiTheme({
    palette: {
-      primary1Color: amber500,
+      primary1Color: amber400,
       accent1Color: deepOrange500,
    }
 });

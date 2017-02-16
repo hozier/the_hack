@@ -1,19 +1,21 @@
 import React from 'react'
 import Avatar from 'material-ui/Avatar';
-import {amber500, pink300} from 'material-ui/styles/colors';
+import {amber400, pink300} from 'material-ui/styles/colors';
 import MastHead from 'material-ui/svg-icons/maps/directions-bike';
 import RaisedButton from 'material-ui/RaisedButton';
 import withWidth from 'material-ui/utils/withWidth';
 import Hozier from "../img/csseuxui-128.jpg"
 import Playground from "../utility/playground"
 import {Link} from 'react-router';
+import Event from 'material-ui/svg-icons/notification/event-available';
+import Payment from 'material-ui/svg-icons/maps/local-grocery-store';
 
 class Homepage extends React.Component {
    // overview: defines styles used locally only for this component
    styles = (() => {
       return {
          mastheadBox:{
-            background:amber500,
+            background:amber400,
             margin: 0,
             right: 0,
             left: 'auto',
@@ -67,8 +69,8 @@ class Homepage extends React.Component {
             <div style={this.styles.mastheadBox}>
                <Avatar
                   icon={ <MastHead/> }
-                  backgroundColor={amber500}
-                  color={'#009688'}
+                  backgroundColor={amber400}
+                  color={'#00796B'}
                   size={300}
                   />
                <h1>  Bike Coop </h1>
@@ -83,13 +85,28 @@ class Homepage extends React.Component {
 
 
             <Playground payload={
-                  <div>
+                  <div style={{textAlign: 'center'}}>
                      <Avatar
-                        src={Hozier}
+                        icon={<Payment/>}
                         size={100}
-                        style={{marginRight:20, marginBottom:-5}}
+                        backgroundColor={'#00796B'}
+                        color={amber400}
+                        style={{margin: 50, marginBottom:15, marginTop:15}}
                         />
-                     {this.styles.introBlurb}
+                     <Avatar
+                        icon={<Event/>}
+                        size={100}
+                        backgroundColor={pink300}
+                        color={'#00796B'}
+                        style={{margin: 50, marginBottom:15, marginTop:15}}
+                        />
+                     <Avatar
+                        icon={<MastHead/>}
+                        size={100}
+                        color={'#00796B'}
+                        style={{margin: 50, marginBottom:15, marginTop:15}}
+                        />
+
                   </div>
                }
 

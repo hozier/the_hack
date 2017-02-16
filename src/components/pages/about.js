@@ -62,7 +62,7 @@ class ProjectsPage extends React.Component{
                payload={
                   <div>
                      <h2 style={{color: grey900, fontWeight: '100', lineHeight: '22px', marginTop: 39}}>
-                        / the_hack >
+                        Bike Coop
                         <div style={{fontFamily: 'Times', fontSize:12, color:grey500 }}>
                            A Publication of the Product <sup>co. </sup>
                         <span style={{fontSize:9}}>EST 2o15.</span>
