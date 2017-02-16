@@ -1,7 +1,7 @@
 import React from 'react'
 import Avatar from 'material-ui/Avatar';
-import {lime500, pink300} from 'material-ui/styles/colors';
-import Fingerprint from 'material-ui/svg-icons/action/fingerprint';
+import {amber500, pink300} from 'material-ui/styles/colors';
+import MastHead from 'material-ui/svg-icons/maps/directions-bike';
 import RaisedButton from 'material-ui/RaisedButton';
 import withWidth from 'material-ui/utils/withWidth';
 import Hozier from "../img/csseuxui-128.jpg"
@@ -13,7 +13,7 @@ class Homepage extends React.Component {
    styles = (() => {
       return {
          mastheadBox:{
-            background:lime500,
+            background:amber500,
             margin: 0,
             right: 0,
             left: 'auto',
@@ -66,13 +66,13 @@ class Homepage extends React.Component {
          <div>
             <div style={this.styles.mastheadBox}>
                <Avatar
-                  icon={<Fingerprint />}
-                  backgroundColor={lime500}
-                  color={'#455a64'}
+                  icon={ <MastHead/> }
+                  backgroundColor={amber500}
+                  color={'#009688'}
                   size={300}
                   />
-               <h1>  / the_hack > </h1>
-               <p>An Anthology of Thoughts Sewn Together by </p>
+               <h1>  Bike Coop </h1>
+               <p>@UMassAmherst</p>
                <p style={{letterSpacing: 4}}><b>#{this.state.tags[0]}</b></p><br/>
                <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
                   <RaisedButton label="Explore"

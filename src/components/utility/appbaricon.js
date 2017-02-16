@@ -4,7 +4,7 @@ import OctoCat from "./octocat"
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Subheader from 'material-ui/Subheader';
-import {lime500, grey800} from 'material-ui/styles/colors';
+import {amber500, grey800} from 'material-ui/styles/colors';
 import {Link} from 'react-router';
 
 class AppBarIcon extends React.Component{
@@ -41,7 +41,7 @@ class AppBarIcon extends React.Component{
                <Link to={"/"} style={{ textDecoration: 'none' }} >
                   <Subheader style={
                      {cursor: 'pointer', paddingTop: 16, color:grey800,
-                     background:lime500, }}
+                     background:amber500, }}
                      onTouchTap={this.handleToggle} >/ the_hack >
                   </Subheader>
                </Link>
