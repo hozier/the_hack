@@ -46,11 +46,11 @@ class AppBarIcon extends React.Component{
                   </Subheader>
                </Link>
 
-               <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
+               <Link to={"/events/"} style={{ textDecoration: 'none' }} >
                   <MenuItem onTouchTap={this.handleToggle}>Events</MenuItem>
                </Link>
 
-               <Link to={"/projects/"} style={{ textDecoration: 'none' }} >
+               <Link to={"/prices/"} style={{ textDecoration: 'none' }} >
                   <MenuItem onTouchTap={this.handleToggle}>Prices</MenuItem>
                </Link>
 

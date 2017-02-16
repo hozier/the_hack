@@ -3,15 +3,16 @@ import withWidth from 'material-ui/utils/withWidth';
 import Playground from "../utility/playground"
 import PaperEngine from "../automation/paperEngine"
 import UMassAmherst from "../img/UMassAmherst_seal_black.svg"
+import BikeCoop from "../img/bikeCoop.jpg"
 import {grey900, grey500} from 'material-ui/styles/colors';
 
 
-class ProjectsPage extends React.Component{
+class PricesPage extends React.Component{
 
    datastore = () => {
       const array = [
          {
-            cardHeaderTitle:"Author, Founder",
+            cardHeaderTitle:"UMass Bike Coop",
             zDepth:1,
             url:undefined,
             dialogTitle:`Author's Note`,
@@ -21,13 +22,6 @@ class ProjectsPage extends React.Component{
             to some as a convergence of curiosity. As an author, I’ve encouraged curiousness in the face of uncertainty — believing it is fundamental
             to the writing process. Integral to the development of original solutions and design, curiosity is core to the Product co. — serving as a space
             where creativity and curiosity thrive. — Hozier, P. William `
-         },
-         {
-            cardHeaderTitle:"Academia",
-            zDepth:2,
-            url:undefined,
-            dialogTitle:'University of Massachusetts Amherst',
-            dialogBody:'A special thanks to the brilliant minds of the College of Information and Computer Sciences | University of Massachusetts Amherst.',
          },
          {
             cardHeaderTitle:"Mission",
@@ -71,14 +65,10 @@ class ProjectsPage extends React.Component{
                      </h2>
                      {
                      [this.data[0]].map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')} src={ 'http://www.scottishprovidentbuilding.co.uk/images/quill.svg?crc=166794421' }></PaperEngine>
+                           return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')} src={ BikeCoop }></PaperEngine>
                      })}
                      {
                      [this.data[1]].map((row, i) => {
-                              return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')}  src={UMassAmherst }></PaperEngine>
-                     })}
-                     {
-                     [this.data[2]].map((row, i) => {
                            return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')}  src={ 'https://www.thinkava.com/assets/images/map.svg' }></PaperEngine>
                      })}
                   </div>
@@ -92,4 +82,4 @@ class ProjectsPage extends React.Component{
 };
 
 
-export default withWidth()(ProjectsPage);
+export default withWidth()(PricesPage);

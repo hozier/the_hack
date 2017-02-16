@@ -88,7 +88,7 @@ render(){
             <h1>  Bike Coop </h1>
             <p>@UMassAmherst</p>
             <p style={{letterSpacing: 4}}><b>#{this.state.tags[0]}</b></p><br/>
-            <Link to={"/monologues/"} style={{ textDecoration: 'none' }} >
+            <Link to={"/prices/"} style={{ textDecoration: 'none' }} >
                <RaisedButton label="Explore"
                   style={{marginBottom:40}}/>
             </Link>
@@ -98,9 +98,17 @@ render(){
 
          <Playground payload={
                <div style={{textAlign: 'center'}}>
-                  <CircleEngine {...this.circleProps(<Payment/>, '#00796B', amber400, 'Prices')} />
-                  <CircleEngine {...this.circleProps(<Event/>, pink300, '#00796B', 'Events')} />
-                  <CircleEngine {...this.circleProps(<MastHead/>, undefined, '#00796B', 'About')} />
+                  <Link to={"/prices/"} style={{ textDecoration: 'none' }} >
+                     <CircleEngine {...this.circleProps(<Payment/>, '#00796B', amber400, 'Prices')} />
+                  </Link>
+
+                  <Link to={"/events/"} style={{ textDecoration: 'none' }} >
+                     <CircleEngine {...this.circleProps(<Event/>, pink300, '#00796B', 'Events')} />
+                  </Link>
+
+                  <Link to={"/about/"} style={{ textDecoration: 'none' }} >
+                     <CircleEngine {...this.circleProps(<MastHead/>, undefined, '#00796B', 'About')} />
+                  </Link>
                </div>
             }
 

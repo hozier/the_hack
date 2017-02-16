@@ -6,7 +6,7 @@ import Code from 'material-ui/svg-icons/maps/layers';
 import {redA200, grey600} from 'material-ui/styles/colors';
 import CardEngine from "../automation/cardEngine"
 
-class MonologuesPage extends React.Component{
+class EventsPage extends React.Component{
 
    datastore = () => {
       const powderedBlue = '#eff3ff'
@@ -47,4 +47,4 @@ class MonologuesPage extends React.Component{
 };
 
 
-export default withWidth()(MonologuesPage);
+export default withWidth()(EventsPage);

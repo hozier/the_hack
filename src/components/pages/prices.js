@@ -10,7 +10,7 @@ import Labor from 'material-ui/svg-icons/action/build';
 import Misc from 'material-ui/svg-icons/action/settings';
 
 
-class ProjectsPage extends React.Component{
+class PricesPage extends React.Component{
 
    datastore = () => {
       const base = 'https://github.com/hozier/'
@@ -85,4 +85,4 @@ class ProjectsPage extends React.Component{
 };
 
 
-export default withWidth()(ProjectsPage);
+export default withWidth()(PricesPage);
