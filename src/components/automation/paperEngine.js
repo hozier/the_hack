@@ -86,7 +86,7 @@ class PaperEngine extends React.Component{
                         color={color}
                         size={200}
                         />
-                     <span style={{fontSize:16, color:color}}>{row.price}</span>
+                     <span style={{fontFamily: 'Georgia', fontSize:16, color:'#ffffff'}}>{row.price}</span>
                   </div>
                </Paper>
 
