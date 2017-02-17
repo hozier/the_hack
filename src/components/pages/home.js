@@ -1,6 +1,6 @@
 import React from 'react'
 import Avatar from 'material-ui/Avatar';
-import {amber400, pink300} from 'material-ui/styles/colors';
+import {amber400, pink300,deepOrange900} from 'material-ui/styles/colors';
 import MastHead from 'material-ui/svg-icons/maps/directions-bike';
 import RaisedButton from 'material-ui/RaisedButton';
 import withWidth from 'material-ui/utils/withWidth';
@@ -8,6 +8,7 @@ import Playground from "../utility/playground"
 import {Link} from 'react-router';
 import Event from 'material-ui/svg-icons/notification/event-available';
 import Payment from 'material-ui/svg-icons/maps/local-grocery-store';
+import Location from 'material-ui/svg-icons/maps/pin-drop';
 import CircleEngine from "../automation/circleEngine"
 
 
@@ -30,7 +31,7 @@ datastore = (() => {
    return [
       { link:'prices', icon:<Payment/>, bg:'#00796B', fg:amber400, snackMsg:'Prices' },
       { link:'events', icon:<Event/>, bg:pink300, fg:'#00796B', snackMsg:'Events' },
-      { link:'about', icon:<MastHead/>, bg:undefined, fg:'#00796B', snackMsg:'About' }
+      { link:'about', icon:<Location/>, bg:undefined, fg:deepOrange900, snackMsg:'Location' }
    ]
 })()
 
@@ -54,8 +55,8 @@ render(){
                color={'#00796B'}
                size={300}
                />
-            <p style={{marginTop: -50, marginLeft:65,fontWeight: 'normal', fontSize:74, fontFamily: 'Georgia', letterSpacing: -7.5}}>  Bike Coop<sub style={{fontSize:12, letterSpacing: 0, marginLeft:-7}}><b>est. 1970's.</b></sub></p>
-            <p style={{letterSpacing: 6, marginTop: -82.5}}><b>@UMassAmherst</b> </p>
+            <p style={{marginTop: -50, marginLeft:65,fontWeight: 'normal', fontSize:74, fontFamily: 'Georgia', letterSpacing: -7.5}}>  Bike Coop<sub style={{fontSize:12, letterSpacing: 0, marginLeft:-7}}>est. 1970's.</sub></p>
+            <p style={{fontFamily: 'Georgia', letterSpacing: 6, marginTop: -82.5}}>@UMassAmherst</p>
             <Link to={"/prices/"} style={{ textDecoration: 'none' }} >
                <RaisedButton label="Explore"
                   style={{marginBottom:40}}/>

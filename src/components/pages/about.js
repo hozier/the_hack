@@ -43,6 +43,28 @@ class PricesPage extends React.Component{
             to explore the avenues of code and algorithms through the elemental principles of design.
             </p>,
          },
+         {
+            cardHeaderTitle:<p>Location & Hours<sup></sup></p>,
+            zDepth:5,
+            url:undefined,
+            dialogTitle:
+            <div style={{fontFamily: 'Georgia'}}>Where We Are
+               <p style={{fontSize:12, marginTop:-15, marginBottom:-10}}>
+                  UMass Bike <sup>coop.</sup> est. 1970's.<br/>
+               </p>
+            </div>,
+            dialogBody:
+            <p style={{marginTop:0}}>
+               <div style={{fontFamily: 'Georgia'}}>Location:<br/></div>
+               Student Union, University of Massachusetts Amherst
+
+               <div style={{fontFamily: 'Georgia'}}><br/>Hours:<br/></div>
+               M - F 10am - 4pm
+
+               <div style={{fontFamily: 'Georgia'}}><br/>Contact:<br/></div>
+               (413) xxx xxxx
+            </p>,
+         },
       ]
       return array
    }
@@ -79,6 +101,10 @@ class PricesPage extends React.Component{
                      {
                      [this.data[0]].map((row, i) => {
                            return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')} src={ BikeCoop }></PaperEngine>
+                     })}
+                     {
+                     [this.data[2]].map((row, i) => {
+                           return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')}  src={ UMassAmherst }></PaperEngine>
                      })}
                      {
                      [this.data[1]].map((row, i) => {
