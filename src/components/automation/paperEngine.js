@@ -79,7 +79,7 @@ class PaperEngine extends React.Component{
                   onMouseLeave={this.handleMouseLeave}>
                   <h3 style={{fontWeight: 'normal', fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
 
-                  <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: this.props.H?(221):(155), paddingTop: 40, marginTop: 40}}>
+                  <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: this.props.H?(181):(115), paddingTop: 40, marginTop: 40}}>
                      <Avatar
                         style={{marginTop:-55}}
                         src={this.props.src && this.props.src}
