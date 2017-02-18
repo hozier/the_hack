@@ -112,7 +112,7 @@ class AboutPage extends React.Component{
                   </div>
                }
 
-               maxWidth={1100}
+               maxWidth={900}
                />
          </div>
       )
