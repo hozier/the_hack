@@ -11,18 +11,38 @@ import Misc from 'material-ui/svg-icons/action/settings';
 
 class PricesPage extends React.Component{
 
+   pay = (value) => {
+      const base = '.00'
+      const d = '$'
+      return `${d}${value}${base}`
+   }
+
    datastore = () => {
-      const base = '$10.00'
-      const array = [
-         { cardHeaderTitle:"Tire", price:`${base}` },
-         { cardHeaderTitle:"Tube", price:`${base}` },
-         { cardHeaderTitle:"Chain", price:`${base}` },
-         { cardHeaderTitle:"Flat Fix", price:`${base}` },
-         { cardHeaderTitle:"Tune-Up", price:`${base}` },
-         { cardHeaderTitle:"Helmet", price:`${base}` },
-         { cardHeaderTitle:"Bar Tape", price:`${base}` }
+      const base = '.00'
+      const d = '$'
+      const items = [
+         { cardHeaderTitle:"Tube", price: this.pay(7) },
+         { cardHeaderTitle:"Cables Housing",price: this.pay(20)},
+         { cardHeaderTitle:"Front New Spoke", price: this.pay(25)},
+         { cardHeaderTitle:"Rear New Spoke", price:  this.pay(30)},
+         { cardHeaderTitle:"Tire", price:this.pay('30-70') },
+         { cardHeaderTitle:"Bar Wrap", price: this.pay(15) },
       ]
-      return array
+      const repair = [
+         { cardHeaderTitle:"Flat Fix", price: this.pay(15) },
+         { cardHeaderTitle:"Basic Tune-Up", price: this.pay(50)},
+         { cardHeaderTitle:"Brake Adjust", price: this.pay(15)},
+         { cardHeaderTitle:"Gear Adjust",price: this.pay(15)},
+         { cardHeaderTitle:"BB Adjust", price: this.pay(15)},
+         { cardHeaderTitle:"Gear Install", price:`${this.pay('10-25')}`},
+         { cardHeaderTitle:"Chain Install", price:this.pay(8)},
+         { cardHeaderTitle:"Drivetrain Clean", price: this.pay(25)},
+         { cardHeaderTitle:"Wheel True", price:this.pay(15)},
+         { cardHeaderTitle:"Cassette/Freewheel Install", price: this.pay(8)},
+         { cardHeaderTitle:"Headset Adjust", price:this.pay(6)},
+         { cardHeaderTitle:"Back Fender Install", price:this.pay(20) },
+      ]
+      return {items:items, repair:repair}
    }
 
    data = this.datastore()
@@ -34,18 +54,15 @@ class PricesPage extends React.Component{
                payload={
                   <div>
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Items & Accessories</h2>{
-                        this.data.slice(0,0+2 +1).concat(this.data.slice(7)).map((row, i) => {
+                        this.data.items.map((row, i) => {
                               return <PaperEngine key={i} collection={[row]} svg={ <Items/> }></PaperEngine>
                         })}
 
                      <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Labor</h2>{
-                        this.data.slice(3,3+1 +1).map((row, i) => {
+                        this.data.repair.map((row, i) => {
                               return <PaperEngine key={i} collection={[row]} svg={ <Labor/> }></PaperEngine>
                         })}
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Misc.</h2>{
-                        this.data.slice(5, 5+1 +1).map((row, i) => {
-                              return <PaperEngine key={i} collection={[row]} svg={ <Misc/> }></PaperEngine>
-                        })}
+
                   </div>
                }
                maxWidth={1100}
