@@ -58,7 +58,7 @@ class PricesPage extends React.Component{
                               return <PaperEngine key={i} collection={[row]} svg={ <Items/> }></PaperEngine>
                         })}
 
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Labor</h2>{
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Repair</h2>{
                         this.data.repair.map((row, i) => {
                               return <PaperEngine key={i} collection={[row]} svg={ <Labor/> }></PaperEngine>
                         })}
