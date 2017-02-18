@@ -55,7 +55,7 @@ render(){
                color={'#00796B'}
                size={300}
                />
-            <p style={{marginTop: -50, marginLeft:65,fontWeight: 'normal', fontSize:74, fontFamily: 'Georgia', letterSpacing: -7.5}}>  Bike Coop<sub style={{fontSize:12, letterSpacing: 0, marginLeft:-7}}>est. 1970's.</sub></p>
+            <p style={{marginTop: -50, fontWeight: 'normal', fontSize:74, fontFamily: 'Georgia', letterSpacing: -7.5}}>  Bike Coop</p>
             <p style={{fontFamily: 'Georgia', letterSpacing: 6, marginTop: -82.5}}>@UMassAmherst</p>
             <Link to={"/prices/"} style={{ textDecoration: 'none' }} >
                <RaisedButton label="Explore"

@@ -7,7 +7,7 @@ import BikeCoop from "../img/bikeCoop.jpg"
 import {grey900, grey500} from 'material-ui/styles/colors';
 
 
-class PricesPage extends React.Component{
+class AboutPage extends React.Component{
 
    datastore = () => {
       const array = [
@@ -77,8 +77,7 @@ class PricesPage extends React.Component{
          headerBackground:bg,
          key:i,
          collection:[row],
-         H:325,
-         W:300,
+
       }
    })
 
@@ -121,4 +120,4 @@ class PricesPage extends React.Component{
 };
 
 
-export default withWidth()(PricesPage);
+export default withWidth()(AboutPage);
