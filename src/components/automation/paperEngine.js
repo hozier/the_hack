@@ -77,7 +77,7 @@ class PaperEngine extends React.Component{
                   zDepth={this.state.zDepth}
                   onMouseEnter={this.handleMouseEnter}
                   onMouseLeave={this.handleMouseLeave}>
-                  <h3 style={{fontWeight: 'normal', fontSize:18, color:this.props.background?(color):(grey900)}}>{row.cardHeaderTitle}</h3>
+                  <h3 style={{fontWeight: 'normal', fontSize:18, color:(grey900)}}>{row.cardHeaderTitle}</h3>
 
                   <div onTouchTap={this.handleOpen} style={{cursor: 'pointer', backgroundColor: backgroundColor, height: this.props.H?(200):(133), paddingTop: 40, marginTop: 40}}>
                      <Avatar

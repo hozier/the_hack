@@ -97,18 +97,20 @@ class AboutPage extends React.Component{
                         </div>
                         <br/>
                      </h2>
-                     {
-                     [this.data[0]].map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')} src={ BikeCoop }></PaperEngine>
-                     })}
-                     {
-                     [this.data[2]].map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')}  src={ UMassAmherst }></PaperEngine>
-                     })}
-                     {
-                     [this.data[1]].map((row, i) => {
-                           return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')}  src={ 'https://www.thinkava.com/assets/images/map.svg' }></PaperEngine>
-                     })}
+                     <div style={{textAlign: 'center'}}>
+                        {
+                        [this.data[0]].map((row, i) => {
+                              return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')} src={ BikeCoop }></PaperEngine>
+                        })}
+                        {
+                        [this.data[2]].map((row, i) => {
+                              return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')}  src={ UMassAmherst }></PaperEngine>
+                        })}
+                        {
+                        [this.data[1]].map((row, i) => {
+                              return <PaperEngine {...this.stylePaper(row, i, '#ffffff', '#000000')}  src={ 'https://www.thinkava.com/assets/images/map.svg' }></PaperEngine>
+                        })}
+                     </div>
                   </div>
                }
 

@@ -8,6 +8,7 @@ import PaperEngine from "../automation/paperEngine"
 import Items from 'material-ui/svg-icons/image/style';
 import Labor from 'material-ui/svg-icons/action/build';
 import Misc from 'material-ui/svg-icons/action/settings';
+import {deepOrange300, grey900, teal700, amber400} from 'material-ui/styles/colors';
 
 class PricesPage extends React.Component{
 
@@ -18,8 +19,6 @@ class PricesPage extends React.Component{
    }
 
    datastore = () => {
-      const base = '.00'
-      const d = '$'
       const items = [
          { cardHeaderTitle:"Tube", price: this.pay(7) },
          { cardHeaderTitle:"Cables Housing",price: this.pay(20)},
@@ -38,7 +37,7 @@ class PricesPage extends React.Component{
          { cardHeaderTitle:"Chain Install", price:this.pay(8)},
          { cardHeaderTitle:"Drivetrain Clean", price: this.pay(25)},
          { cardHeaderTitle:"Wheel True", price:this.pay(15)},
-         { cardHeaderTitle:"Cassette/Freewheel Install", price: this.pay(8)},
+         { cardHeaderTitle:"Cassette Install", price: this.pay(8)},
          { cardHeaderTitle:"Headset Adjust", price:this.pay(6)},
          { cardHeaderTitle:"Back Fender Install", price:this.pay(20) },
       ]
@@ -53,19 +52,23 @@ class PricesPage extends React.Component{
             <Playground
                payload={
                   <div>
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Items & Accessories</h2>{
-                        this.data.items.map((row, i) => {
-                              return <PaperEngine key={i} collection={[row]} svg={ <Items/> }></PaperEngine>
-                        })}
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Items & Accessories</h2>
+                        <div style={{textAlign: 'center'}}>
+                           { this.data.items.map((row, i) => {
+                                 return <PaperEngine key={i} collection={[row]} svg={ <Items/> }></PaperEngine>
+                           })}
+                        </div>
 
-                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Repair</h2>{
-                        this.data.repair.map((row, i) => {
-                              return <PaperEngine key={i} collection={[row]} svg={ <Labor/> }></PaperEngine>
-                        })}
+                     <h2 style={{fontWeight: '100', lineHeight: '50px' }}>Prices | Repair</h2>
+                        <div style={{textAlign: 'center'}}>
+                           { this.data.repair.map((row, i) => {
+                                    return <PaperEngine key={i} color={ teal700 } background={deepOrange300  } collection={[row]} svg={ <Labor/> }></PaperEngine>
+                              })}
+                        </div>
 
                   </div>
                }
-               maxWidth={1100}
+               maxWidth={900}
                />
          </div>
       )
