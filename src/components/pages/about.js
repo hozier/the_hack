@@ -23,7 +23,7 @@ class AboutPage extends React.Component{
             </div>,
             dialogBody:
             <p style={{marginTop:0}}>
-            Curiosity is love. It's ignorance's nemesis. We should all be so lucky to have a playground for our imaginations. — Farrell, C.
+            We are a group of students who collectively co-manage a bicycle repair shop on the UMass campus.  Together we provide lower labor rates and speedy turnaround times than larger bike shops.  Ride on by to learn more about our business!
             </p>,
          },
          {
@@ -56,13 +56,17 @@ class AboutPage extends React.Component{
             dialogBody:
             <p style={{marginTop:0}}>
                <div style={{fontFamily: 'Georgia'}}>Location:<br/></div>
-               Student Union, University of Massachusetts Amherst
+               319B Student Union, University of Massachusetts Amherst
 
                <div style={{fontFamily: 'Georgia'}}><br/>Hours:<br/></div>
-               M - F 10am - 4pm
+               M - T 10am - 4pm
+               F  10am - 2pm
 
                <div style={{fontFamily: 'Georgia'}}><br/>Contact:<br/></div>
-               (413) xxx xxxx
+               <div>
+               (413) 545 - 0647 or (205) 549 - "COOP"
+               </div>
+
             </p>,
          },
       ]
